@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Camp: Code & Robotics Adventure</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css"/>
+
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div class="toc-toggle" onclick="toggleToc()">Table of Contents</div>
+
+    <div class="table-of-contents" id="toc">
+        <h2 class="text-2xl font-bold mb-4 text-white">Curriculum</h2>
+        <ul id="toc-list">
+            <!-- TOC items will be populated by JavaScript -->
+        </ul>
+    </div>
+
+    <div class="slide-container">
+        <!-- Day 1 -->
+        <div class="slide" id="slide-1">
+            <div class="day-header">Day 1: Welcome & Intro to Scratch</div>
+            <h2 class="slide-title">Welcome to Code & Robotics Adventure! 🎉</h2>
+            <h3>Lesson Notes: What is Programming? 🤖</h3>
+            <p>Welcome, young innovators! Over the next 30 days, we're going on an amazing adventure to learn how to create with computers and even make robots move!</p>
+            <p>So, what is programming? Think of it like giving instructions to a computer. Just like you tell a friend what to do, programmers tell computers what to do, step-by-step. These instructions are called "code," and the process is called "coding" or "programming."</p>
+            <p>Computers are super fast, but they only do exactly what you tell them. If your instructions aren't clear, the computer might get confused! Our goal is to learn how to give clear, precise instructions. 💡</p>
+
+            <h3>Introducing Scratch! 🎨</h3>
+            <p>Today, we're starting with a super fun and easy way to learn programming called <strong>Scratch</strong>. Scratch uses colorful blocks that you can snap together, just like LEGOs, to create stories, games, and animations. You don't need to type any complicated words! 🧩</p>
+            <p><strong>Key Areas of the Scratch Interface:</strong></p>
+            <ul>
+                <li><span class="emoji">🎭</span> <strong>Stage:</strong> Where your project comes to life! You'll see your characters (called Sprites) here.</li>
+                <li><span class="emoji">🐱</span> <strong>Sprites:</strong> The characters or objects in your project. You can choose from a library or draw your own.</li>
+                <li><span class="emoji">🖼️</span> <strong>Backdrop:</strong> The background of your stage.</li>
+                <li><span class="emoji">🧱</span> <strong>Blocks Palette:</strong> This is where all the colorful code blocks are organized by category (Motion, Looks, Sound, Events, Control, Sensing, Operators, Variables, My Blocks).</li>
+                <li><span class="emoji">📝</span> <strong>Scripts Area:</strong> This is where you drag and drop blocks to build your code!</li>
+            </ul>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Explore & Share 🤝</h4>
+                <p><strong>Activity:</strong> In pairs, explore the Scratch interface for 10 minutes. Try clicking on different block categories, dragging blocks to the scripts area, and seeing what happens. Then, share one cool thing you discovered with your partner. 🗣️</p>
+                <p><strong>Goal:</strong> Get comfortable navigating Scratch and asking questions. 🤔</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: First Steps in Scratch 🚀</h4>
+                <ol>
+                    <li>Open Scratch (online or desktop version).</li>
+                    <li>Change the default cat sprite to a different sprite from the library. 🐶</li>
+                    <li>Change the backdrop to something fun. 🏞️</li>
+                    <li>Drag a "move 10 steps" block from the Motion category to the Scripts Area. Click it! What happens? 🚶</li>
+                    <li>Drag a "say Hello! for 2 seconds" block from the Looks category. Click it! 👋</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: My First Animation Idea ✨</h4>
+                <p>Think about a very simple animation or story you'd like to make in Scratch. It could be a character moving across the screen, or saying something. Write down 3 steps you think you'd need to make it happen. ✍️</p>
+                <p><strong>Example:</strong></p>
+                <ol>
+                    <li>Choose a character. 🐻</li>
+                    <li>Make the character move. ➡️</li>
+                    <li>Make the character say "Hi!". 💬</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="slide" id="slide-2">
+            <div class="day-header">Day 2: Motion & Looks Blocks</div>
+            <h2 class="slide-title">Making Sprites Move and Look Different! 🤸‍♀️</h2>
+            <h3>Lesson Notes: Motion and Looks 🚶‍♀️👗</h3>
+            <p>Yesterday, we got a taste of Scratch. Today, we'll dive deeper into two very important categories of blocks: <strong>Motion</strong> and <strong>Looks</strong>. ✨</p>
+
+            <h4>Motion Blocks (Blue) 🔵</h4>
+            <p>These blocks control how your sprites move on the Stage. 🗺️</p>
+            <ul>
+                <li><code>move (10) steps</code>: Moves the sprite forward in the direction it's facing. ➡️</li>
+                <li><code>turn (15) degrees</code>: Rotates the sprite clockwise or counter-clockwise. 🔄</li>
+                <li><code>go to x: () y: ()</code>: Moves the sprite to a specific spot on the stage (coordinates). 📍</li>
+                <li><code>glide (1) secs to x: () y: ()</code>: Makes the sprite smoothly move to a spot over a period of time. 🕊️</li>
+                <li><code>if on edge, bounce</code>: If the sprite hits the edge of the stage, it will turn around. ↩️</li>
+            </ul>
+            <p><strong>Tip:</strong> The Stage has an X-Y grid! X goes left-right, Y goes up-down. (0,0) is the very center. ➕</p>
+
+            <h4>Looks Blocks (Purple) 🟣</h4>
+            <p>These blocks change how your sprites appear on the Stage. 👀</p>
+            <ul>
+                <li><code>say (Hello!) for (2) seconds</code>: Makes the sprite show a speech bubble. 💬</li>
+                <li><code>think (Hmm...) for (2) seconds</code>: Makes the sprite show a thought bubble. 💭</li>
+                <li><code>switch costume to (costume2)</code>: Changes the sprite's appearance. Sprites can have multiple "costumes." 👗</li>
+                <li><code>next costume</code>: Switches to the next costume in the list. ➡️</li>
+                <li><code>change size by (10)</code> / <code>set size to (100)%</code>: Makes the sprite bigger or smaller. 📏</li>
+                <li><code>hide</code> / <code>show</code>: Makes the sprite disappear or reappear. 👻</li>
+                <li><code>change color effect by (25)</code> / <code>clear graphic effects</code>: Adds cool visual effects. 🌈</li>
+            </ul>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Sprite Dance Party 💃🕺</h4>
+                <p><strong>Activity:</strong> In small groups (3-4), brainstorm an idea for a "dance" or "show" using 2-3 sprites. Each group member takes responsibility for one sprite. Work together to make your sprites move and change costumes in a coordinated way. 👯‍♀️</p>
+                <p><strong>Goal:</strong> Practice using Motion and Looks blocks collaboratively and understand basic coordination. 🤝</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Bouncing Ball Animation 🏀⬆️⬇️</h4>
+                <p>Create a new Scratch project:</p>
+                <ol>
+                    <li>Choose a "ball" sprite and a simple backdrop. ⚽</li>
+                    <li>Make the ball start at the bottom of the screen (e.g., <code>go to x: 0 y: -150</code>). ⬇️</li>
+                    <li>Make the ball glide up to the top (e.g., <code>glide 1 secs to x: 0 y: 150</code>). ⬆️</li>
+                    <li>Then, make it glide back down (e.g., <code>glide 1 secs to x: 0 y: -150</code>). ⬇️</li>
+                    <li>Repeat this motion forever (we'll learn the "forever" block tomorrow!). For now, just make it go up and down once. 🔁</li>
+                    <li>Add a "change color effect by 25" block each time it goes up or down. 🎨</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Storyboard a Short Animation 📜</h4>
+                <p>Design a short animation (3-5 seconds) in your notebook or on a piece of paper. It should involve at least two sprites and use both motion and looks blocks. Draw a simple storyboard showing what happens in each key moment. ✍️</p>
+                <p><strong>Example Idea:</strong> A cat walks across the screen, changes color, and then says "Meow!". 🐈🌈💬</p>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="slide" id="slide-3">
+            <div class="day-header">Day 3: Events & Control Blocks</div>
+            <h2 class="slide-title">Making Your Projects Interactive! 🎮</h2>
+            <h3>Lesson Notes: Events and Control 🚦</h3>
+            <p>So far, our Scratch projects have started automatically or when we click individual blocks. Today, we'll learn how to make them interactive and control when things happen using <strong>Events</strong> and <strong>Control</strong> blocks. 🕹️</p>
+
+            <h4>Events Blocks (Yellow) 🟡</h4>
+            <p>Events are like triggers that start your code. They tell your program "when to do something." ⏰</p>
+            <ul>
+                <li><code>when green flag clicked</code>: The most common way to start a project. ▶️</li>
+                <li><code>when (space) key pressed</code>: Starts code when a specific key is pressed. ⌨️</li>
+                <li><code>when this sprite clicked</code>: Starts code when you click on the sprite. 👆</li>
+                <li><code>when backdrop switches to (backdrop1)</code>: Starts code when the background changes. 🏞️➡️🌃</li>
+                <li><code>when I receive (message1)</code> / <code>broadcast (message1)</code>: These are super important for sprites to talk to each other! (More on this later). 📡</li>
+            </ul>
+
+            <h4>Control Blocks (Orange) 🟠</h4>
+            <p>Control blocks manage the flow of your program. They tell your code "how many times" or "under what conditions" to do something. ⚙️</p>
+            <ul>
+                <li><code>wait (1) seconds</code>: Pauses your program for a specified time. ⏳</li>
+                <li><code>repeat (10)</code>: Repeats the blocks inside it a certain number of times. 🔄</li>
+                <li><code>forever</code>: Repeats the blocks inside it endlessly. This is great for continuous animations or games. ♾️</li>
+                <li><code>if () then</code>: Performs actions ONLY if a certain condition is true. (We'll use Sensing blocks with this). ✅</li>
+                <li><code>if () then else</code>: Performs one set of actions if a condition is true, and a different set if it's false. ⚖️</li>
+                <li><code>stop all</code>: Stops all scripts in the project. 🛑</li>
+            </ul>
+            <p><strong>Connection:</strong> Think of "Events" as the "start" button for a specific part of your code, and "Control" blocks as the rules for how that code runs. 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Interactive Storytelling 📖🤝</h4>
+                <p><strong>Activity:</strong> In pairs, create a short interactive story in Scratch. One person focuses on the "Events" (e.g., when green flag clicked, when space key pressed, when sprite clicked), and the other focuses on "Control" (e.g., repeat, forever, wait). Make a character move, then stop and say something when you press a key, and then maybe change its costume repeatedly. 🗣️🔄</p>
+                <p><strong>Goal:</strong> Understand how Events trigger actions and Control blocks manage the timing and repetition of those actions. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Moving Character with Keyboard 🚶‍♀️⌨️</h4>
+                <p>Create a new Scratch project:</p>
+                <ol>
+                    <li>Choose a character sprite. 🚶</li>
+                    <li>Add a <code>when (right arrow) key pressed</code> event. Inside it, add <code>change x by 10</code>. ➡️</li>
+                    <li>Add a <code>when (left arrow) key pressed</code> event. Inside it, add <code>change x by -10</code>. ⬅️</li>
+                    <li>Test your project! Can you move your character left and right? ✅</li>
+                    <li>Challenge: Add <code>when (up arrow) key pressed</code> and <code>when (down arrow) key pressed</code> to move it up and down using <code>change y by 10</code> and <code>change y by -10</code>. ⬆️⬇️</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Design a Simple Game Idea 🎮✍️</h4>
+                <p>Imagine a simple game you could make in Scratch. How would the player interact with it? What would trigger actions? What would repeat? Write down: 📝</p>
+                <ol>
+                    <li>The name of your game. 🏷️</li>
+                    <li>What the player does to start the game (e.g., "click green flag"). ▶️</li>
+                    <li>One action that repeats forever (e.g., "an enemy moves across the screen"). 👻🔄</li>
+                    <li>One action that happens when the player presses a key (e.g., "player jumps"). ⬆️⌨️</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="slide" id="slide-4">
+            <div class="day-header">Day 4: Loops & Conditionals</div>
+            <h2 class="slide-title">Making Smart Decisions & Repeating Actions! 🧠🔄</h2>
+            <h3>Lesson Notes: Loops and Conditionals 🔁❓</h3>
+            <p>Today, we're focusing on two powerful concepts from the <strong>Control</strong> category: <strong>Loops</strong> and <strong>Conditionals</strong>. These are fundamental to all programming, not just Scratch! 💪</p>
+
+            <h4>Loops (Repetition) 🔄</h4>
+            <p>Loops allow you to repeat a set of instructions without having to write them over and over again. This saves a lot of time and makes your code much cleaner. 🧹</p>
+            <ul>
+                <li><code>repeat (10)</code>: Executes the blocks inside exactly 10 times (or whatever number you put). 🔢</li>
+                <li><code>forever</code>: Executes the blocks inside endlessly. Great for game loops, animations, or constantly checking something. ♾️</li>
+                <li><code>repeat until ()</code>: Executes the blocks inside until a certain condition becomes true. (We'll use Sensing blocks here). ✅</li>
+            </ul>
+            <p><strong>Why are loops important?</strong> Imagine making a character walk 100 steps. Instead of dragging 100 "move 1 step" blocks, you just use one "move 1 step" inside a "repeat 100" loop! 🚶‍♂️💨</p>
+
+            <h4>Conditionals (Decision Making) ⚖️</h4>
+            <p>Conditionals allow your program to make decisions. They say, "If something is true, then do this; otherwise, maybe do something else." 🤔</p>
+            <ul>
+                <li><code>if () then</code>: If the condition inside the hexagon shape is true, the blocks inside this C-shaped block will run. If false, they are skipped. ✅❌</li>
+                <li><code>if () then else</code>: If the condition is true, the blocks in the "then" part run. If the condition is false, the blocks in the "else" part run. ➡️⬅️</li>
+            </ul>
+            <p><strong>How do we get the condition?</strong> We use <strong>Sensing</strong> blocks (light blue) and <strong>Operators</strong> blocks (green) inside the hexagonal input of the conditional blocks. 👁️‍🗨️➕</p>
+            <ul>
+                <li><strong>Sensing Blocks:</strong> <code>touching (mouse-pointer)?</code>, <code>key (space) pressed?</code>, <code>distance to (mouse-pointer)</code>, <code>ask (What's your name?) and wait</code>. 📍⌨️📏💬</li>
+                <li><strong>Operators Blocks:</strong> <code>() > ()</code> (greater than), <code>() < ()</code> (less than), <code>() = ()</code> (equal to), <code>and</code>, <code>or</code>, <code>not</code>. ➕➖✖️➗</li>
+            </ul>
+            <p><strong>Connection:</strong> Loops are about "doing something many times." Conditionals are about "doing something only if a specific situation is true." Together, they make your programs smart and dynamic! 💡</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Obstacle Course Game Design 🚧🤝</h4>
+                <p><strong>Activity:</strong> In pairs, design a simple obstacle course game. One person focuses on making an obstacle move repeatedly (using a loop). The other focuses on what happens if the player touches the obstacle (using an <code>if then</code> conditional and a Sensing block like <code>touching (obstacle sprite)?</code>). 🏃‍♂️💥</p>
+                <p><strong>Goal:</strong> Apply loops for continuous action and conditionals for interaction/collision detection. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Simple Catching Game 🍎🧺</h4>
+                <p>Create a new Scratch project:</p>
+                <ol>
+                    <li>Choose a "catcher" sprite (e.g., a bowl or paddle) and a "falling" sprite (e.g., an apple or ball). 🥣🍎</li>
+                    <li>Make the catcher sprite move left and right with the arrow keys (from Day 3). ⬅️➡️</li>
+                    <li>Make the falling sprite start at the top of the screen (<code>go to x: (random position) y: 180</code>). ⬆️</li>
+                    <li>Add a <code>forever</code> loop to the falling sprite. Inside the loop: ♾️
+                        <ul>
+                            <li><code>change y by -5</code> (make it fall). ⬇️</li>
+                            <li><code>if touching (catcher sprite)? then</code>: 🧺
+                                <ul>
+                                    <li><code>go to x: (random position) y: 180</code> (reset to top). ⬆️</li>
+                                    <li>(Optional: Add a sound effect!) 🔔</li>
+                                </ul>
+                            </li>
+                            <li><code>if y position < -170 then</code>: (If it misses the catcher and goes off screen) ⬇️
+                                <ul>
+                                    <li><code>go to x: (random position) y: 180</code> (reset to top). ⬆️</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Conditional Story Branch 🌳📚</h4>
+                <p>Write a short story (3-5 sentences) that has a "choice" in it. Then, write two different endings based on that choice. This is like an "if/else" statement in a story! ✍️</p>
+                <p><strong>Example:</strong> "You walk into a forest. If you go left, you find a magical creature. Else (if you go right), you find a hidden treasure." 🦄💎</p>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="slide" id="slide-5">
+            <div class="day-header">Day 5: Variables & Operators</div>
+            <h2 class="slide-title">Keeping Score and Doing Math! 💯➕</h2>
+            <h3>Lesson Notes: Variables and Operators 📦🧮</h3>
+            <p>Today, we'll learn how to make our games keep track of information, like scores or health, using <strong>Variables</strong>. We'll also explore <strong>Operators</strong>, which help us do math and compare things. 📊</p>
+
+            <h4>Variables (Orange/Data) 🟠</h4>
+            <p>A variable is like a special box or container where you can store a piece of information (a number, some text, etc.). The value inside the box can change! In Scratch, you create variables in the "Variables" category. 🗃️</p>
+            <ul>
+                <li><code>make a variable</code>: Creates a new variable. You can choose if it's "for all sprites" (everyone can see it) or "for this sprite only." 🌐👤</li>
+                <li><code>set (my variable) to (0)</code>: Puts a specific value into the variable. ➡️</li>
+                <li><code>change (my variable) by (1)</code>: Adds or subtracts a value from the variable's current value. ⬆️⬇️</li>
+                <li><code>show variable (my variable)</code> / <code>hide variable (my variable)</code>: Shows or hides the variable's display on the Stage. 🙈🙉</li>
+            </ul>
+            <p><strong>Common Uses:</strong> Scores, health, lives, timers, speed, names. 🏆❤️⏰💨</p>
+
+            <h4>Operators (Green) 🟢</h4>
+            <p>Operators are like tools for doing math, comparing values, and combining text. They often fit into the hexagonal or oval-shaped inputs of other blocks. 🛠️</p>
+            <ul>
+                <li><strong>Math Operators:</strong> <code>() + ()</code>, <code>() - ()</code>, <code>() * ()</code>, <code>() / ()</code> (add, subtract, multiply, divide). ➕➖✖️➗</li>
+                <li><strong>Comparison Operators:</strong> <code>() > ()</code> (greater than), <code>() < ()</code> (less than), <code>() = ()</code> (equal to). These return TRUE or FALSE, perfect for conditional blocks! 📏✅❌</li>
+                <li><strong>Logical Operators:</strong> <code>() and ()</code>, <code>() or ()</code>, <code>not ()</code>. Combine or invert true/false conditions.
+                    <ul>
+                        <li><code>and</code>: Both conditions must be true. ✅✅</li>
+                        <li><code>or</code>: At least one condition must be true. ✅❌ or ❌✅</li>
+                        <li><code>not</code>: Reverses the condition (true becomes false, false becomes true). 🔄</li>
+                    </ul>
+                </li>
+                <li><strong>String Operators:</strong> <code>join (apple) (banana)</code> (combines text), <code>letter (1) of (apple)</code>. 🔗🔤</li>
+                <li><strong>Random Number:</strong> <code>pick random (1) to (10)</code>: Generates a random number within a range. Very useful for games! 🎲</li>
+            </ul>
+            <p><strong>Connection:</strong> Variables store the data, and Operators help you manipulate that data (change scores, check if a score is high enough, etc.). 🤝</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Scoreboard Design 🏆🤝</h4>
+                <p><strong>Activity:</strong> In pairs, brainstorm a game idea where keeping score is important. Discuss: What variable(s) would you need? When would the score change (increase/decrease)? What operators might you use (e.g., to check if the score reaches a winning number)? Draw a simple sketch of your game screen with the scoreboard. ✍️</p>
+                <p><strong>Goal:</strong> Understand the purpose of variables and how operators help manage game logic. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Scoring in the Catching Game 🍎💯</h4>
+                <p>Go back to your Catching Game from Day 4:</p>
+                <ol>
+                    <li>Create a new variable called <code>score</code> (for all sprites). 🆕</li>
+                    <li>At the beginning of the game (<code>when green flag clicked</code>), <code>set score to 0</code>. 0️⃣</li>
+                    <li>In the falling sprite's code, inside the <code>if touching (catcher sprite)? then</code> block, add <code>change score by 1</code>. ⬆️</li>
+                    <li>Challenge: Add a "lives" variable. If the falling sprite misses the catcher (goes off screen), <code>change lives by -1</code>. If lives become 0, <code>stop all</code>. ❤️‍🩹🛑</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Operator Challenge ❓✍️</h4>
+                <p>Solve these problems using your knowledge of operators: 💡</p>
+                <ol>
+                    <li>If you have 5 apples and get 3 more, how many do you have? (Which operator?) 🍎➕</li>
+                    <li>Is 10 greater than 7 AND less than 12? (Which operators?) 📏✅</li>
+                    <li>Pick a random number between 1 and 100. If it's greater than 50, say "Big number!". Else, say "Small number!". (Describe the blocks you'd use). 🎲💬</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="slide" id="slide-6">
+            <div class="day-header">Day 6: Broadcasts & Messages</div>
+            <h2 class="slide-title">Making Sprites Talk to Each Other! 🗣️📡</h2>
+            <h3>Lesson Notes: Broadcasts and Messages 📻</h3>
+            <p>So far, our sprites have mostly acted independently or reacted to direct interaction. Today, we'll learn a super important way for sprites to communicate and coordinate actions: <strong>Broadcasts and Messages</strong>. 📬</p>
+
+            <h4>Broadcast Blocks (Yellow - Events Category) 🟡</h4>
+            <p>Think of broadcasting like sending a message to everyone on the stage. Any sprite can send a message, and any sprite can listen for a message. 📢</p>
+            <ul>
+                <li><code>broadcast (message1)</code>: Sends a message to all other sprites and the stage. The script that sends this message continues running immediately. 🚀</li>
+                <li><code>broadcast (message1) and wait</code>: Sends a message and then pauses the current script until all other scripts that are listening for that message have finished running. ⏳</li>
+            </ul>
+
+            <h4>When I Receive Block (Yellow - Events Category) 🟡</h4>
+            <p>This block is the listener. When a sprite receives a specific message that has been broadcast, the code attached to this block will start running. 👂</p>
+            <ul>
+                <li><code>when I receive (message1)</code>: When this sprite gets 'message1', start running the blocks attached. ▶️</li>
+            </ul>
+            <p><strong>Why are they important?</strong></p>
+            <ul>
+                <li><strong>Coordination:</strong> Make multiple sprites do things at the same time or in a specific sequence (e.g., "Game Start" message makes all enemies appear). 👯‍♀️</li>
+                <li><strong>Scene Changes:</strong> When one scene ends, broadcast a message like "Next Level" to switch backdrops and set up new sprites. 🏞️➡️🌃</li>
+                <li><strong>Complex Interactions:</strong> A player sprite might broadcast "Hit Enemy" which the enemy sprite listens for to decrease its health. 💥❤️‍🩹</li>
+            </ul>
+            <p><strong>Connection:</strong> Broadcasts are like a radio station. One sprite sends a signal (broadcast), and other sprites tune into that signal (when I receive) to react. This is a fundamental concept for making complex, multi-part programs work together. 🌐</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Collaborative Story Scene 📖🤝</h4>
+                <p><strong>Activity:</strong> In groups of 3, plan a short scene for a story or game where at least two sprites need to react to something one sprite does. For example: 🎭</p>
+                <ul>
+                    <li>Sprite A says "Hello!" and then broadcasts "greeting". 💬📢</li>
+                    <li>Sprite B, when it receives "greeting", waves. 👋</li>
+                    <li>Sprite C, when it receives "greeting", changes color. 🌈</li>
+                </ul>
+                <p>Work together to implement this in Scratch. 🧩</p>
+                <p><strong>Goal:</strong> Practice using broadcast/receive to synchronize actions between sprites. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Game Over Screen 💀</h4>
+                <p>Modify your Catching Game (or any game with a "lives" variable):</p>
+                <ol>
+                    <li>In the sprite that manages "lives" (or the main game script), when <code>lives = 0</code> (inside an <code>if then</code> block), add: 💔
+                        <ul>
+                            <li><code>broadcast (game over)</code> 📢</li>
+                            <li><code>stop all</code> (or <code>stop other scripts in sprite</code> if you want the game over screen to animate). 🛑</li>
+                        </ul>
+                    </li>
+                    <li>Create a new sprite for the "Game Over" message (e.g., text saying "GAME OVER"). Make it initially <code>hide</code>. 👻</li>
+                    <li>For the "Game Over" sprite, add: <code>when I receive (game over)</code>
+                        <ul>
+                            <li><code>show</code> 👁️</li>
+                            <li>(Optional: <code>go to x: 0 y: 0</code> to center it, maybe change its size). 📍📏</li>
+                        </ul>
+                    </li>
+                    <li>For all other game sprites (catcher, falling object), add: <code>when I receive (game over)</code>
+                        <ul>
+                            <li><code>hide</code> 👻</li>
+                        </ul>
+                    </li>
+                    <li>Test your game! Does the "Game Over" screen appear and do other sprites disappear when lives run out? ✅</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Message Flow Diagram 🗺️✍️</h4>
+                <p>Draw a simple diagram for a game or story where you use at least two broadcasts. Show which sprite sends which message, and which sprites receive and react to them. 💬➡️👂</p>
+                <p><strong>Example:</strong></p>
+                <p>Player Sprite <span class="emoji">🏃‍♂️</span> --> Broadcast "Jump" <span class="emoji">📢</span> --> Platform Sprite (moves down) <span class="emoji">⬇️</span> AND Sound Sprite (plays jump sound) <span class="emoji">🔊</span></p>
+            </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="slide" id="slide-7">
+            <div class="day-header">Day 7: Mini-Project & Peer Review (Scratch)</div>
+            <h2 class="slide-title">Bringing It All Together: Your First Scratch Project! 🌟</h2>
+            <h3>Lesson Notes: Project Planning & Debugging 📝🐞</h3>
+            <p>Today is exciting! You'll be working on your first mini-project, applying everything you've learned about Motion, Looks, Events, Control, Variables, Operators, and Broadcasts. 🚀</p>
+
+            <h4>Project Goal: Create an Interactive Story or Simple Game 🎮📖</h4>
+            <p>Your project should include:</p>
+            <ul>
+                <li>At least 2 sprites. 👯‍♀️</li>
+                <li>Uses <code>when green flag clicked</code> to start. ▶️</li>
+                <li>Uses at least one <code>forever</code> loop. ♾️</li>
+                <li>Uses at least one <code>if then</code> or <code>if then else</code> conditional block. ✅⚖️</li>
+                <li>Uses at least one variable (e.g., score, health, timer). 📦</li>
+                <li>Uses at least one broadcast message for sprite communication. 📡</li>
+                <li>Incorporates Motion and Looks blocks. 🚶‍♀️👗</li>
+            </ul>
+
+            <h4>Tips for Project Work: 💡</h4>
+            <ul>
+                <li><strong>Start Simple:</strong> Don't try to build the most complicated game ever. Start with a basic idea and add features step-by-step. 🌱➡️🌳</li>
+                <li><strong>Plan First:</strong> Use your storyboard from Day 2 or draw a quick flowchart. What needs to happen first? Then what? 🗺️✍️</li>
+                <li><strong>Test Often:</strong> Run your project frequently as you add new blocks. If something breaks, you'll know where to look. ▶️🔍</li>
+                <li><strong>Debugging:</strong> If your code isn't working, it's called a "bug." Don't worry, everyone gets bugs! 🐛
+                    <ul>
+                        <li><strong>Read your code:</strong> Go through your blocks slowly, imagining what the computer will do. 📖🧠</li>
+                        <li><strong>Check conditions:</strong> Is your <code>if</code> statement true when you expect it to be? ✅❓</li>
+                        <li><strong>Look at variables:</strong> Are your variables changing the way you expect? 📦🔄❓</li>
+                        <li><strong>Ask for help:</strong> Your peers and teachers are here to help you find those bugs! 🤝🧑‍🏫</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Project Brainstorm & Support 🧠🤝</h4>
+                <p><strong>Activity:</strong> Spend 15 minutes in small groups. Share your mini-project ideas. Give each other feedback and suggestions. If someone is stuck, try to help them brainstorm solutions. During the project work time, encourage pair programming or asking a peer for help before asking a teacher. 🗣️💡</p>
+                <p><strong>Goal:</strong> Foster a collaborative environment for problem-solving and idea generation. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Mini-Project Creation 🛠️</h4>
+                <p>Spend the majority of today's class time working on your Scratch mini-project. Teachers will circulate to provide guidance and answer questions. 🧑‍🏫</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Project Reflection & Peer Review Prep 📝🤔</h4>
+                <p>Before tomorrow's peer review, do the following: ✍️</p>
+                <ol>
+                    <li>Play your own project several times. Does it work as expected? ✅🎮</li>
+                    <li>Write down 1-2 things you are proud of in your project. ⭐</li>
+                    <li>Write down 1-2 things you found challenging or would like to improve. ⛰️📈</li>
+                    <li>Be ready to explain your project to your peers. 🗣️</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="slide" id="slide-8">
+            <div class="day-header">Day 8: Functions (My Blocks) & Code Organization</div>
+            <h2 class="slide-title">Making Reusable Code with "My Blocks" 🧱🔄</h2>
+            <h3>Lesson Notes: Functions and Modularity 🧩</h3>
+            <p>As our Scratch projects get bigger, our code can get long and messy. Today, we'll learn about <strong>"My Blocks"</strong> (also known as Functions or Procedures in other programming languages). These help us organize our code and make it reusable! 🧹</p>
+
+            <h4>What are "My Blocks"? 📦</h4>
+            <p>A "My Block" is like creating your own custom block that contains a sequence of other blocks. Instead of repeating the same set of instructions many times, you can just call your custom block. 📞</p>
+            <ul>
+                <li><strong>Define Block:</strong> This is where you put the actual code that your custom block will run. It starts with <code>define [My Block Name]</code>. ⚙️</li>
+                <li><strong>Call Block:</strong> This is the new block that appears in your "My Blocks" category. When you drag this block into your script, it runs all the code defined inside its "Define" block. ▶️</li>
+            </ul>
+            <p><strong>Why use "My Blocks" (Functions)?</strong></p>
+            <ul>
+                <li><strong>Organization:</strong> Makes your scripts shorter and easier to read. 📚</li>
+                <li><strong>Reusability:</strong> Write a set of instructions once, and use it many times in different places. ♻️</li>
+                <li><strong>Easier Debugging:</strong> If there's a bug in a repeated action, you only need to fix it in one place (the "Define" block). 🐞🩹</li>
+                <li><strong>Abstraction:</strong> You don't need to know *how* the block works, just *what* it does. (e.g., you use "move 10 steps" without knowing the complex math behind it). 🎩✨</li>
+            </ul>
+
+            <h4>Adding Inputs to "My Blocks" ➡️</h4>
+            <p>You can make your custom blocks even more powerful by adding inputs (parameters/arguments). This allows you to pass different values to your block each time you use it. 🔢🔤</p>
+            <ul>
+                <li>When you create a new "My Block," you can add a "number or text input" or a "boolean input" (for true/false conditions). ✅❌</li>
+                <li>These inputs become variables within your "Define" block. 📦</li>
+            </ul>
+            <p><strong>Connection:</strong> "My Blocks" are your first step into understanding "functions" in text-based programming. Functions are essential for breaking down complex problems into smaller, manageable pieces, which is a core concept in computer science. 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Function Brainstorm 🧠💡</h4>
+                <p><strong>Activity:</strong> In pairs, look at your mini-project from Day 7. Identify any sequences of blocks that you repeated, or that perform a clear, single task (e.g., "make character jump," "reset game," "play winning animation"). Discuss how you could turn these into "My Blocks." 🔄</p>
+                <p><strong>Goal:</strong> Recognize patterns in code that can be abstracted into functions. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Custom Movement Block 🚶‍♀️🔄</h4>
+                <p>Create a new Scratch project with a sprite:</p>
+                <ol>
+                    <li>Go to "My Blocks" and click "Make a Block." 🆕</li>
+                    <li>Name it <code>move steps and turn</code>. 🏷️</li>
+                    <li>Add two number/text inputs: <code>steps</code> and <code>degrees</code>. 🔢</li>
+                    <li>In the <code>define move steps and turn (steps) (degrees)</code> block, add:
+                        <ul>
+                            <li><code>move (steps) steps</code> ➡️</li>
+                            <li><code>turn (degrees) degrees</code> 🔄</li>
+                        </ul>
+                    </li>
+                    <li>Now, in your main script (e.g., <code>when green flag clicked</code>), drag your new <code>move steps and turn</code> block. Try different values for steps and degrees. 🧪</li>
+                    <li>Challenge: Create another "My Block" called <code>grow and shrink</code> that takes a <code>size change</code> input and makes the sprite grow and then shrink by that amount. 🌳🍄</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Function Description ✍️</h4>
+                <p>Think of a real-world task that you do often (e.g., making breakfast, brushing your teeth). Describe it as a "function" with inputs and outputs. 🍳🦷</p>
+                <p><strong>Example:</strong></p>
+                <p><strong>Function Name:</strong> Make a Sandwich 🥪</p>
+                <p><strong>Inputs:</strong> Type of bread, Filling 1, Filling 2 (optional) 🍞🧀🍖</p>
+                <p><strong>Steps:</strong></p>
+                <ol>
+                    <li>Get bread. 🍞</li>
+                    <li>Put Filling 1 on bread. 🧀</li>
+                    <li>(If Filling 2 exists) Put Filling 2 on bread. 🍖</li>
+                    <li>Put another slice of bread on top. 🍞</li>
+                </ol>
+                <p><strong>Output:</strong> A delicious sandwich! 😋</p>
+            </div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="slide" id="slide-9">
+            <div class="day-header">Day 9: Lists (Arrays)</div>
+            <h2 class="slide-title">Storing Collections of Data! 📚</h2>
+            <h3>Lesson Notes: Lists (Arrays) 📋</h3>
+            <p>So far, variables can only hold one piece of information at a time. What if we want to store a whole collection of things, like a list of favorite foods, high scores, or items in a game inventory? That's where <strong>Lists</strong> come in! 🛒</p>
+
+            <h4>What are Lists? 📝</h4>
+            <p>In Scratch, a List (in other programming languages, often called an "Array") is like a container that can hold many different items, one after another, in a specific order. Each item has a number (its "index") that tells you its position in the list. 🔢</p>
+            <ul>
+                <li><strong>Make a List:</strong> Found in the "Variables" category, just like making a variable. 🆕</li>
+                <li><strong>Add Item:</strong> <code>add (thing) to (my list)</code>: Adds a new item to the end of the list. ➕</li>
+                <li><strong>Delete Item:</strong> <code>delete (1) of (my list)</code>: Removes an item at a specific position (index). 🗑️</li>
+                <li><strong>Insert Item:</strong> <code>insert (thing) at (1) of (my list)</code>: Adds an item at a specific position, pushing other items down. ➡️</li>
+                <li><strong>Replace Item:</strong> <code>replace item (1) of (my list) with (thing)</code>: Changes an item at a specific position. 🔄</li>
+                <li><strong>Get Item:</strong> <code>item (1) of (my list)</code>: Gets the item at a specific position. 🔍</li>
+                <li><strong>Length:</strong> <code>length of (my list)</code>: Tells you how many items are in the list. 📏</li>
+                <li><strong>Contains:</strong> <code>(my list) contains (thing)?</code>: Checks if an item is in the list (returns true/false). ✅❌</li>
+                <li><code>show list (my list)</code> / <code>hide list (my list)</code>: Shows or hides the list display on the Stage. 🙈🙉</li>
+            </ul>
+            <p><strong>Important Note:</strong> In Scratch, list items are numbered starting from 1. In many text-based languages, they start from 0! ⚠️</p>
+            <p><strong>Common Uses:</strong></p>
+            <ul>
+                <li>Storing high scores. 🏆</li>
+                <li>Managing inventory in a game (e.g., items collected). 🎒</li>
+                <li>Creating quizzes with multiple questions. ❓</li>
+                <li>Storing dialogue lines for characters. 💬</li>
+            </ul>
+            <p><strong>Connection:</strong> Lists are crucial for handling collections of data. This concept directly translates to "arrays" or "lists" in C and other languages. Understanding how to add, remove, and access items in a list is a fundamental programming skill. 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: List Application Brainstorm 💡🤝</h4>
+                <p><strong>Activity:</strong> In pairs, brainstorm 2-3 different game or story ideas where using a list would be very helpful. For each idea, explain what kind of data would be in the list and how you would use Scratch list blocks (e.g., add, delete, check if contains) to manage that data. ✍️</p>
+                <p><strong>Goal:</strong> Understand practical applications of lists in programming. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: High Score List 🏆</h4>
+                <p>Create a new Scratch project:</p>
+                <ol>
+                    <li>Create a new list called <code>High Scores</code> (for all sprites). 🆕</li>
+                    <li>When the green flag is clicked, <code>delete all of (High Scores)</code> to clear it for a fresh start. 🗑️</li>
+                    <li>Add 5-10 random numbers to the list using <code>add (pick random 1 to 100) to (High Scores)</code>. 🎲➕</li>
+                    <li>Display the list on the stage. 📊</li>
+                    <li>Challenge: Add a new "My Block" called <code>add score to high scores</code> that takes a <code>new score</code> input. This block should add the <code>new score</code> to the list. 📈</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Quiz Question List ❓✍️</h4>
+                <p>Imagine you're making a simple quiz game. Write down 3-5 quiz questions and their answers. Then, describe how you would use two separate lists in Scratch: one for the questions and one for the answers. How would you get the first question and check its answer? 📝✅</p>
+            </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="slide" id="slide-10">
+            <div class="day-header">Day 10: Introduction to Algorithms (Flowcharts)</div>
+            <h2 class="slide-title">Thinking Like a Programmer: Step-by-Step Solutions! 🧠🪜</h2>
+            <h3>Lesson Notes: What are Algorithms? ⚙️</h3>
+            <p>Before we write any code, whether in Scratch or C, we need a plan! Today, we'll learn about <strong>Algorithms</strong> and how to visualize them using <strong>Flowcharts</strong>. 🗺️</p>
+
+            <h4>What is an Algorithm? 🤔</h4>
+            <p>An algorithm is simply a step-by-step set of instructions or rules for solving a problem or completing a task. Think of it like a recipe for baking a cake, or directions to get to a friend's house. Every program you've made in Scratch so far is an algorithm! 🍰➡️🏠</p>
+            <ul>
+                <li><strong>Clear:</strong> Each step must be unambiguous. 🔍</li>
+                <li><strong>Finite:</strong> It must end after a certain number of steps. 🛑</li>
+                <li><strong>Effective:</strong> It must solve the problem. ✅</li>
+            </ul>
+            <p><strong>Examples of Algorithms in Daily Life:</strong></p>
+            <ul>
+                <li>How to brush your teeth. 🦷</li>
+                <li>How to make a cup of tea. ☕</li>
+                <li>How to find a book in a library. 📚</li>
+            </ul>
+
+            <h4>What are Flowcharts? 📊</h4>
+            <p>A flowchart is a diagram that shows the steps of an algorithm using special shapes and arrows. It helps us visualize the logic and flow of a program before we start coding. ✍️</p>
+            <p><strong>Common Flowchart Symbols:</strong></p>
+            <ul>
+                <li><span class="emoji">⚪</span> <strong>Oval (Start/End):</strong> Marks the beginning or end of the algorithm.</li>
+                <li><span class="emoji"> прямоугольник</span> <strong>Rectangle (Process/Action):</strong> Represents a step where something is done (e.g., "Move 10 steps," "Change score by 1").</li>
+                <li><span class="emoji">菱形</span> <strong>Diamond (Decision):</strong> Represents a point where a decision is made, usually a "Yes/No" or "True/False" question (e.g., "Is touching edge?"). There are usually two paths coming out.</li>
+                <li><span class="emoji">平行四边形</span> <strong>Parallelogram (Input/Output):</strong> Represents data being entered into the system (input) or displayed (output) (e.g., "Ask name," "Say Hello!").</li>
+                <li><span class="emoji">➡️</span> <strong>Arrows (Flow Lines):</strong> Show the direction of the flow from one step to another.</li>
+            </ul>
+            <p><strong>Connection:</strong> Understanding algorithms and flowcharts is super important because it helps you think logically and break down big problems into smaller, manageable steps. This skill is essential for any kind of programming, whether visual or text-based, and even for designing robotics logic. 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Daily Algorithm Flowchart 🗓️🤝</h4>
+                <p><strong>Activity:</strong> In pairs, choose a simple daily activity (e.g., getting ready for school, making a sandwich). Draw a flowchart for that activity using the symbols learned. Present your flowchart to another pair and see if they can follow it. ✍️🗣️</p>
+                <p><strong>Goal:</strong> Practice identifying steps, decisions, inputs, and outputs in real-world scenarios and translating them into flowchart symbols. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Flowchart a Simple Scratch Game 🎮🗺️</h4>
+                <p>Choose one of your simpler Scratch projects (e.g., the Bouncing Ball or Catching Game). Draw a flowchart that represents the main logic of that game. Focus on the main sprite's actions, loops, and any conditional statements. ✍️</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Design a "Traffic Light" Algorithm 🚦✍️</h4>
+                <p>Imagine you're designing the logic for a simple traffic light. Draw a flowchart that shows how the traffic light changes from red to green to yellow and back to red. Include timings (e.g., "wait 5 seconds"). 🚥</p>
+            </div>
+        </div>
+
+        <!-- Day 11 -->
+        <div class="slide" id="slide-11">
+            <div class="day-header">Day 11: From Blocks to Text: Scratch to C</div>
+            <h2 class="slide-title">Translating Blocks to Code: The Power of C! 💻</h2>
+            <h3>Lesson Notes: Scratch Concepts in C</h3>
+            <p>You've become Scratch masters! Now, let's see how the amazing concepts you've learned in Scratch translate into a foundational text-based programming language called <strong>C</strong>. C is a very powerful language that gives you a lot of control over the computer, and it's used in many places, including operating systems, games, and even microcontrollers! Learning C first will help you truly appreciate how much easier other languages like Python make things later. 😉</p>
+
+            <h4>Why C? 🚀</h4>
+            <ul>
+                <li><strong>Foundation:</strong> C teaches you how computers work at a more fundamental level.</li>
+                <li><strong>Performance:</strong> C programs can be very fast!</li>
+                <li><strong>Control:</strong> It gives you fine-grained control over hardware, which is great for robotics.</li>
+                <li><strong>Stepping Stone:</strong> Understanding C makes it easier to learn other languages, including Python and C++.</li>
+            </ul>
+
+            <h4>Your First C Program: "Hello, World!" 👋</h4>
+            <p>Every programmer starts with "Hello, World!". In C, it looks like this:</p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt; // This line includes a library for input/output functions
+
+int main() { // The 'main' function is where your program starts running
+    printf("Hello, World!\n"); // printf is like Scratch's 'say' block
+    return 0; // Means the program finished successfully
+}
+</code></pre>
+            </div>
+            <p><strong>Explanation:</strong></p>
+            <ul>
+                <li><code>#include <stdio.h></code>: This line tells the C compiler to include the "Standard Input/Output" library, which contains functions like <code>printf</code>. Think of it like adding an "extension" in Scratch.</li>
+                <li><code>int main() { ... }</code>: This is the main function where your program begins execution. All your code will go inside the curly braces <code>{}</code>. It's like the "when green flag clicked" block in Scratch, but for your whole program.</li>
+                <li><code>printf("Hello, World!\n");</code>: This is how you print text to the console. <code>\n</code> means "new line" (like pressing Enter).</li>
+                <li><code>return 0;</code>: This tells the operating system that your program ran without any errors.</li>
+            </ul>
+            <p><strong>Important:</strong> Every C statement must end with a semicolon <code>;</code>!</p>
+
+            <h4>Comments in C 📝</h4>
+            <p>Comments are notes in your code that the C compiler ignores. They are for humans to read and understand what the code does.</p>
+            <div class="code-block">
+                <pre><code>// This is a single-line comment.
+
+/*
+This is a multi-line comment.
+It can span across several lines.
+*/
+</code></pre>
+            </div>
+
+            <p><strong>Connection:</strong> The fundamental idea of giving instructions, starting a program, and displaying output is the same as in Scratch. You're just using different words and symbols! 🧠➡️⌨️</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: First C Program Discussion 🗣️🤝</h4>
+                <p><strong>Activity:</strong> In pairs, discuss the "Hello, World!" program. What parts look familiar from Scratch? What parts are new? Try to explain to your partner why each line is there. 💬</p>
+                <p><strong>Goal:</strong> Get comfortable with the basic structure of a C program.</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Your First C Prints! ✍️</h4>
+                <p>Using an online C compiler (e.g., <a href="https://www.programiz.com/c-programming/online-compiler/" target="_blank" class="text-blue-600 hover:underline">Programiz C Compiler</a> or <a href="https://replit.com/languages/c" target="_blank" class="text-blue-600 hover:underline">Replit C</a>):</p>
+                <ol>
+                    <li>Write a C program that prints "My name is [Your Name]".</li>
+                    <li>Write a C program that prints "I love summer camp!" on one line and "Coding is fun!" on the next line.</li>
+                    <li>Add comments to your code explaining what each <code>printf</code> statement does.</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: C Program Idea 💡</h4>
+                <p>Think of a very simple message or pattern you'd like your C program to print. Write down the message/pattern and how many <code>printf</code> statements you think you'd need to create it. 📝</p>
+                <p><strong>Example:</strong> Print a simple square using <code>*</code> characters.</p>
+                <pre><code>****
+* *
+* *
+****
+</code></pre>
+            </div>
+        </div>
+
+        <!-- Day 12 -->
+        <div class="slide" id="slide-12">
+            <div class="day-header">Day 12: C Variables & Basic Arithmetic</div>
+            <h2 class="slide-title">Storing Information and Doing Math in C! 📦➕</h2>
+            <h3>Lesson Notes: Variables and Operators in C</h3>
+            <p>Just like in Scratch, variables in C are containers for data. But in C, you have to tell the computer what *type* of data the variable will hold before you use it! This is called "declaring" a variable. 🧐</p>
+
+            <h4>Variables and Data Types in C 📊</h4>
+            <p>Before you use a variable in C, you must declare its type. Common types include:</p>
+            <ul>
+                <li><code>int</code>: For whole numbers (integers), like 5, -100, 0. 🔢</li>
+                <li><code>float</code>: For numbers with decimal points, like 3.14, 0.5. decimals</li>
+                <li><code>char</code>: For single characters, like 'A', 'b', '7'. (Use single quotes). 🔤</li>
+            </ul>
+            <p><strong>Declaring and Assigning Variables:</strong></p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int score = 0; // Declare an integer variable named 'score' and set its value to 0
+    float pi = 3.14159; // Declare a float variable named 'pi'
+    char initial = 'C'; // Declare a character variable
+
+    printf("Current score: %d\n", score); // %d is a placeholder for an integer
+    printf("Value of Pi: %f\n", pi);     // %f is a placeholder for a float
+    printf("My initial is: %c\n", initial); // %c is a placeholder for a character
+
+    // Changing variable values
+    score = score + 10; // Add 10 to score
+    printf("New score: %d\n", score);
+
+    score++; // Shortcut: add 1 to score (like 'change score by 1' in Scratch)
+    printf("Score after increment: %d\n", score);
+
+    pi = pi * 2; // Multiply pi by 2
+    printf("Pi doubled: %f\n", pi);
+
+    return 0;
+}
+</code></pre>
+            </div>
+            <p><strong>Format Specifiers:</strong> When using <code>printf</code> to display variables, you need special placeholders:</p>
+            <ul>
+                <li><code>%d</code> or <code>%i</code>: for <code>int</code> (decimal integer)</li>
+                <li><code>%f</code>: for <code>float</code> (floating-point number)</li>
+                <li><code>%c</code>: for <code>char</code> (character)</li>
+            </ul>
+
+            <h4>Basic Arithmetic Operators in C ➕➖✖️➗</h4>
+            <p>C uses the same arithmetic operators you're familiar with:</p>
+            <ul>
+                <li><code>+</code> : Addition</li>
+                <li><code>-</code> : Subtraction</li>
+                <li><code>*</code> : Multiplication</li>
+                <li><code>/</code> : Division</li>
+                <li><code>%</code> : Modulo (gives the remainder of a division)</li>
+            </ul>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int num1 = 20;
+    int num2 = 7;
+
+    printf("Sum: %d\n", num1 + num2);       // Output: 27
+    printf("Difference: %d\n", num1 - num2); // Output: 13
+    printf("Product: %d\n", num1 * num2);    // Output: 140
+    printf("Quotient: %f\n", (float)num1 / num2); // Output: 2.857... (Need (float) for decimal division)
+    printf("Remainder: %d\n", num1 % num2);  // Output: 6 (20 divided by 7 is 2 with remainder 6)
+
+    return 0;
+}
+</code></pre>
+            </div>
+            <p><strong>Note on Division:</strong> If you divide two integers in C, the result will also be an integer (it throws away the decimal part). To get a decimal result, you need to convert one of the numbers to a <code>float</code> first, like <code>(float)num1 / num2</code>.</p>
+
+            <p><strong>Connection:</strong> Variables in C are like Scratch variables, but with strict data types. Arithmetic operators are the same concept as Scratch's green operator blocks. You're learning how to be very precise with your computer instructions! 🎯</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Variable Detective 🕵️‍♀️🤝</h4>
+                <p><strong>Activity:</strong> In pairs, write down 3 different types of information you might want to store in a game (e.g., player health, game level, character name). For each, decide what C data type (`int`, `float`, `char`) would be best and why. Discuss how you would declare and assign a starting value to each. 📝</p>
+                <p><strong>Goal:</strong> Understand the importance of data types in C.</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: C Calculator 🧮</h4>
+                <p>Write a C program that:</p>
+                <ol>
+                    <li>Declares two integer variables and assigns them values (e.g., <code>int a = 15; int b = 4;</code>).</li>
+                    <li>Calculates and prints their sum.</li>
+                    <li>Calculates and prints their difference.</li>
+                    <li>Calculates and prints their product.</li>
+                    <li>Calculates and prints their quotient (as a decimal!).</li>
+                    <li>Calculates and prints the remainder of their division.</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: "About Me" in C ✍️</h4>
+                <p>Write a C program that declares variables for:</p>
+                <ol>
+                    <li>Your age (<code>int</code>).</li>
+                    <li>Your height in meters (<code>float</code>).</li>
+                    <li>The first letter of your name (<code>char</code>).</li>
+                </ol>
+                <p>Assign values to these variables and then use <code>printf</code> statements to print a summary about yourself. Make sure to use the correct format specifiers! 💬</p>
+                <p><strong>Example Output:</strong></p>
+                <pre><code>My age is 10.
+My height is 1.45 meters.
+My initial is A.
+</code></pre>
+            </div>
+        </div>
+
+        <!-- Day 13 -->
+        <div class="slide" id="slide-13">
+            <div class="day-header">Day 13: C Input (`scanf`), Conditionals (`if/else`)</div>
+            <h2 class="slide-title">Making C Programs Interactive & Smart! 💬🤔</h2>
+            <h3>Lesson Notes: User Input and Decisions in C</h3>
+            <p>Today, we'll learn how to get input from the user in C and how to make our programs make decisions based on that input. This is where your programs become truly interactive, just like your Scratch projects! 🎮</p>
+
+            <h4>Getting Input from the User: `scanf()` ⌨️</h4>
+            <p>The <code>scanf()</code> function reads input from the keyboard and stores it in a variable. It's like Scratch's "ask and wait" block!</p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age; // Declare an integer variable to store age
+    float height; // Declare a float variable for height
+    char initial; // Declare a character variable
+
+    printf("Enter your age: ");
+    scanf("%d", &age); // Read an integer from the keyboard and store it in 'age'
+
+    printf("Enter your height in meters (e.g., 1.5): ");
+    scanf("%f", &height); // Read a float
+
+    printf("Enter the first letter of your name: ");
+    scanf(" %c", &initial); // Read a character (note the space before %c!)
+
+    printf("\nYou are %d years old, %.2f meters tall, and your initial is %c.\n", age, height, initial);
+
+    return 0;
+}
+</code></pre>
+            </div>
+            <p><strong>Important Notes:</strong></p>
+            <ul>
+                <li><strong>Address-of Operator (`&`):</strong> When using <code>scanf()</code>, you need to put an ampersand (`&`) before the variable name (e.g., `&age`). This tells `scanf` where in the computer's memory to store the input.</li>
+                <li><strong>Format Specifiers:</strong> Just like with `printf()`, you need the correct format specifier (`%d`, `%f`, `%c`) to tell `scanf()` what type of data to expect.</li>
+                <li><strong>Space before `%c`:</strong> When reading a `char` after reading numbers or other text, always put a space before `%c` in `scanf(" %c", &initial);`. This consumes any leftover newline characters from previous inputs.</li>
+            </ul>
+
+            <h4>Making Decisions: `if`, `else if`, `else` ⚖️</h4>
+            <p>C uses `if`, `else if`, and `else` statements for conditional logic, just like Scratch's `if () then` and `if () then else` blocks.</p>
+            <p><strong>Comparison Operators:</strong> Used inside `if` conditions to compare values.</p>
+            <ul>
+                <li>`==` : Equal to (<strong>two</strong> equals signs!)</li>
+                <li>`!=` : Not equal to</li>
+                <li>`>`  : Greater than</li>
+                <li>`<`  : Less than</li>
+                <li>`>=` : Greater than or equal to</li>
+                <li>`<=` : Less than or equal to</li>
+            </ul>
+            <p><strong>Logical Operators:</strong> Used to combine multiple conditions.</p>
+            <ul>
+                <li>`&&` : AND (both conditions must be true)</li>
+                <li>`||` : OR (at least one condition must be true)</li>
+                <li>`!`  : NOT (reverses the truth of a condition)</li>
+            </ul>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    if (number > 0) { // If number is greater than 0
+        printf("The number is positive.\n");
+    } else if (number < 0) { // Else if number is less than 0
+        printf("The number is negative.\n");
+    } else { // Else (if neither of the above is true, meaning number is 0)
+        printf("The number is zero.\n");
+    }
+
+    // Example with logical operators
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age >= 7 && age <= 17) { // If age is 7 or more AND 17 or less
+        printf("You are in the age range for this camp!\n");
+    } else {
+        printf("This camp is not for your age group.\n");
+    }
+
+    return 0;
+}
+</code></pre>
+            </div>
+            <p><strong>Notice:</strong> C uses curly braces `{}` to group statements that belong to an `if`, `else if`, or `else` block. Indentation is for readability, but the braces are what matter to the compiler.</p>
+
+            <p><strong>Connection:</strong> `scanf()` is your direct equivalent to Scratch's "ask and wait," allowing your program to get information from the user. `if/else` statements in C are the same decision-making tools as in Scratch, letting your program react differently based on conditions. You're building truly interactive programs! 🤝</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Decision Tree Design 🌳🤝</h4>
+                <p><strong>Activity:</strong> In pairs, think of a simple decision a game character might make (e.g., "Should I fight the monster?"). Draw a decision tree (like a small flowchart with diamonds) showing the conditions and outcomes. Then, discuss how you would translate that into C `if/else` statements using comparison and logical operators. ⚔️❓</p>
+                <p><strong>Goal:</strong> Practice applying conditional logic to interactive scenarios.</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Simple Eligibility Checker ✅❌</h4>
+                <p>Write a C program that:</p>
+                <ol>
+                    <li>Asks the user for their grade percentage (e.g., 85).</li>
+                    <li>If the grade is 90 or above, print "Excellent!".</li>
+                    <li>Else if the grade is 70 or above, print "Good job!".</li>
+                    <li>Else (if it's below 70), print "Keep practicing!".</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: "Magic 8-Ball" Logic 🔮✍️</h4>
+                <p>Imagine you're making a "Magic 8-Ball" program. It asks the user a yes/no question, then gives a random answer. For now, just focus on the input and decision part:</p>
+                <ol>
+                    <li>Write pseudocode (plain English steps) for a C program that asks the user a yes/no question.</li>
+                    <li>If the user types "yes", print "That's great!".</li>
+                    <li>If the user types "no", print "Maybe next time!".</li>
+                    <li>(Don't worry about random answers yet, just the input and two specific responses).</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 14 -->
+        <div class="slide" id="slide-14">
+            <div class="day-header">Day 14: C Loops (`for`, `while`) & Mini-Project</div>
+            <h2 class="slide-title">Repeating Actions in C! 🔄</h2>
+            <h3>Lesson Notes: Loops in C</h3>
+            <p>Just like Scratch's `repeat` and `forever` blocks, C has powerful ways to repeat code using <strong>loops</strong>. Loops are essential for doing repetitive tasks efficiently! 🔁</p>
+
+            <h4>The `for` Loop 🔢</h4>
+            <p>The `for` loop is great when you know exactly how many times you want to repeat something. It's like Scratch's `repeat (10)` block.</p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    // This loop will print "Hello!" 5 times
+    for (int i = 0; i < 5; i++) {
+        printf("Hello! (Iteration %d)\n", i);
+    }
+    // i starts at 0.
+    // The loop continues as long as i < 5.
+    // i++ means i increases by 1 after each loop.
+
+    printf("\nCounting down:\n");
+    for (int count = 10; count > 0; count--) {
+        printf("%d...\n", count);
+    }
+    printf("Blast off!\n");
+
+    return 0;
+}
+</code></pre>
+            </div>
+            <p><strong>`for` loop structure:</strong> `for (initialization; condition; update) { ... code ... }`</p>
+            <ul>
+                <li><strong>Initialization:</strong> Runs once at the beginning (e.g., `int i = 0;`).</li>
+                <li><strong>Condition:</strong> Checked before each repetition. If true, the loop runs. If false, the loop stops (e.g., `i < 5;`).</li>
+                <li><strong>Update:</strong> Runs after each repetition (e.g., `i++` which means `i = i + 1;`).</li>
+            </ul>
+
+            <h4>The `while` Loop ♾️</h4>
+            <p>The `while` loop repeats as long as a certain condition is true. It's like Scratch's `forever` or `repeat until` blocks.</p>
+            <div class="code-block">
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int counter = 0;
+    while (counter < 3) { // Loop as long as counter is less than 3
+        printf("Looping... Counter is %d\n", counter);
+        counter++; // Important: remember to change the condition inside the loop!
+    }
+
+    printf("\nGuessing Game (simple version):\n");
+    int secret_number = 7; // Imagine this is a random number
+    int guess;
+
+    while (guess != secret_number) { // Loop until the guess is correct
+        printf("Guess the secret number (1-10): ");
+        scanf("%d", &guess);
+        if (guess != secret_number) {
+            printf("Wrong guess! Try again.\n");
+        }
+    }
+    printf("Congratulations! You guessed it: %d\n", secret_number);
+
+    return 0;
+}
+</code></pre>
+            </div>
+            <p><strong>`while` loop structure:</strong> `while (condition) { ... code ... }`</p>
+            <ul>
+                <li>The `condition` is checked before each repetition. If true, the loop runs. If false, the loop stops.</li>
+                <li><strong>Caution:</strong> If the condition never becomes false, you'll have an "infinite loop"! This is like Scratch's `forever` block.</li>
+            </ul>
+
+            <p><strong>Connection:</strong> `for` and `while` loops in C directly implement the repetition logic you used with `repeat` and `forever` in Scratch. The `while` loop is particularly powerful for game loops or waiting for a sensor input, just like `forever` loops in Scratch constantly check for conditions. 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Loop Scenarios 🔄🤝</h4>
+                <p><strong>Activity:</strong> In pairs, brainstorm two scenarios: one where a `for` loop would be best, and one where a `while` loop would be best. Explain your choices. (e.g., "Counting down for a rocket launch" vs. "Waiting for a button press"). 🚀👆</p>
+                <p><strong>Goal:</strong> Understand when to use different types of loops.</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: C Counter & Password Checker 🔐</h4>
+                <p>Write two separate C programs:</p>
+                <ol>
+                    <li><strong>Count to 10:</strong> Use a `for` loop to print numbers from 1 to 10.</li>
+                    <li><strong>Simple Password:</strong> Use a `while` loop to repeatedly ask the user for a password. If they type "secret", print "Access granted!" and stop the loop. Otherwise, print "Incorrect password. Try again."</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Mini-Project: Text-Based Adventure (C) 🗺️✍️</h4>
+                <p>Design a very simple text-based adventure game in C. It should:</p>
+                <ol>
+                    <li>Ask the user for their name (using `scanf`).</li>
+                    <li>Use `printf` to tell a short story.</li>
+                    <li>Include at least one `if/else` choice (e.g., "Do you go left or right?").</li>
+                    <li>Use a `while` loop to keep the game running until a specific condition is met (e.g., "You found the treasure!" or "Game over!").</li>
+                </ol>
+                <p>Write down your plan (a small flowchart or pseudocode) and then try to implement it in C. 🎮</p>
+            </div>
+        </div>
+
+        <!-- Day 15 -->
+        <div class="slide" id="slide-15">
+            <div class="day-header">Day 15: What is IoT? What is Robotics?</div>
+            <h2 class="slide-title">Bringing Code to the Real World! 🌍💻</h2>
+            <h3>Lesson Notes: Intro to IoT and Robotics 🤖💡</h3>
+            <p>You've learned to make programs on a computer screen. Now, let's explore how programming can interact with the physical world! Today, we introduce <strong>IoT (Internet of Things)</strong> and <strong>Robotics</strong>. 🌐</p>
+
+            <h4>What is IoT (Internet of Things)? 🔗</h4>
+            <p>IoT refers to physical objects ("things") embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet. These "things" can be anything from smart home devices to industrial machines. 🏠🏭</p>
+            <p><strong>Key Idea:</strong> Everyday objects connected to the internet, collecting and sharing data to make our lives easier or smarter. 🧠</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li><span class="emoji">💡</span> <strong>Smart Lights:</strong> Turn on/off with your phone, change color, or automatically adjust to daylight.</li>
+                <li><span class="emoji">🌡️</span> <strong>Smart Thermostats:</strong> Learn your preferences and adjust temperature automatically, or let you control it remotely.</li>
+                <li><span class="emoji">⌚</span> <strong>Wearable Fitness Trackers:</strong> Monitor your heart rate, steps, sleep, and send data to your phone.</li>
+                <li><span class="emoji">🧊</span> <strong>Smart Refrigerators:</strong> Tell you when you're low on milk!</li>
+            </ul>
+            <p><strong>How it connects to Programming:</strong> IoT devices need code to collect data from sensors, send it over the internet, and react to commands received from the internet. 💻➡️🌐</p>
+
+            <h4>What is Robotics? 🤖</h4>
+            <p>Robotics is the branch of technology that deals with the design, construction, operation, and application of robots. Robots are machines that can perform tasks automatically, often mimicking human actions or performing tasks that are dangerous or repetitive for humans. 🦾</p>
+            <p><strong>Key Idea:</strong> Machines that can sense their environment, process information, and act on the physical world. 👁️‍🗨️🧠💪</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li><span class="emoji">🚗</span> <strong>Factory Robots:</strong> Assemble cars, move heavy objects.</li>
+                <li><span class="emoji">🧹</span> <strong>Vacuum Cleaners (e.g., Roomba):</strong> Navigate your home and clean floors.</li>
+                <li><span class="emoji">🩺</span> <strong>Surgical Robots:</strong> Assist doctors in delicate operations.</li>
+                <li><span class="emoji">🪐</span> <strong>Exploration Rovers (e.g., Mars Rover):</strong> Explore distant planets.</li>
+            </ul>
+            <p><strong>How it connects to Programming:</strong> Robots need code to tell them how to move, how to interpret sensor data (like seeing obstacles), and how to make decisions (like turning left or right). This is where our programming skills come in! 💻➡️🤖</p>
+
+            <p><strong>Connection:</strong> Both IoT and Robotics involve bridging the digital world of code with the physical world. They use sensors to gather information (like Scratch's "sensing" blocks), process that information (like Scratch's "control" and "operator" blocks, or C's `if/else` and arithmetic), and then perform actions (like Scratch's "motion" and "looks" blocks, but in the real world!). 🌉</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: IoT/Robotics Brainstorm 🧠🤝</h4>
+                <p><strong>Activity:</strong> In small groups, brainstorm 3-5 examples of IoT devices or robots you've seen or heard about. For each, discuss: What problem does it solve? What kind of "sensing" does it do? What "actions" does it perform? 💡</p>
+                <p><strong>Goal:</strong> Understand real-world applications of IoT and Robotics and start thinking about their components. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Smart Device/Robot Idea ✍️</h4>
+                <p>Imagine a simple problem in your daily life. How could an IoT device or a small robot help solve it? Describe your idea in 3-5 sentences. What would it sense? What would it do? 🤔</p>
+                <p><strong>Example:</strong> "A smart plant pot that senses when the soil is dry and automatically waters the plant." 🪴💧</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Research a Robot/IoT Device 📚🔍</h4>
+                <p>Choose one real-world robot or IoT device (e.g., a self-driving car, a smart doorbell, a drone). Research it briefly (1-2 paragraphs) and describe: 📝</p>
+                <ol>
+                    <li>What it is. 🏷️</li>
+                    <li>What sensors it might use (e.g., cameras, microphones, distance sensors). 👁️‍🗨️👂📏</li>
+                    <li>What actions it performs. 💪</li>
+                    <li>How you think programming is involved in its operation. 💻</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 16 -->
+        <div class="slide" id="slide-16">
+            <div class="day-header">Day 16: Introduction to Microcontrollers (Conceptual)</div>
+            <h2 class="slide-title">The Brains of Smart Devices and Robots! 🧠💡</h2>
+            <h3>Lesson Notes: Microcontrollers 칩</h3>
+            <p>Today, we'll learn about the "brains" inside IoT devices and robots: <strong>Microcontrollers</strong>. We won't be using physical hardware just yet, but understanding what they are is key! 🔑</p>
+
+            <h4>What is a Microcontroller? 🧠</h4>
+            <p>A microcontroller is like a tiny, simple computer on a single chip. It's designed to control specific tasks in electronic devices. Unlike the powerful computer you're using now (which can do many things at once), a microcontroller is usually dedicated to one or a few jobs very well. 🎯</p>
+            <p><strong>Think of it as:</strong> A tiny, programmable brain for your smart devices. 🧠</p>
+            <p><strong>Common Microcontrollers:</strong></p>
+            <ul>
+                <li><span class="emoji"> UNO</span> <strong>Arduino:</strong> Very popular for beginners and hobbyists. Easy to learn.</li>
+                <li><span class="emoji">📶</span> <strong>ESP32/ESP8266:</strong> Great for IoT projects because they have built-in Wi-Fi.</li>
+                <li><span class="emoji">🤏</span> <strong>Raspberry Pi Pico:</strong> Another small, versatile option.</li>
+            </ul>
+            <p><strong>What can a Microcontroller do?</strong></p>
+            <ul>
+                <li><span class="emoji">👂</span> <strong>Read Inputs:</strong> Get information from sensors (e.g., a button being pressed, light level, temperature).</li>
+                <li><span class="emoji">⚙️</span> <strong>Process Information:</strong> Make decisions based on inputs (e.g., "If button pressed, then...").</li>
+                <li><span class="emoji">🗣️</span> <strong>Control Outputs:</strong> Send signals to turn things on or off (e.g., light an LED, make a motor spin).</li>
+                <li><span class="emoji">📡</span> <strong>Communicate:</strong> Send data to other devices or the internet.</li>
+            </ul>
+
+            <h4>Inputs and Outputs (I/O) ➡️⬅️</h4>
+            <p>Microcontrollers have "pins" that connect to the outside world. These pins can be configured as:</p>
+            <ul>
+                <li><span class="emoji">📥</span> <strong>Input Pins:</strong> Used to read signals from sensors or buttons. The microcontroller "listeners" here.</li>
+                <li><span class="emoji">📤</span> <strong>Output Pins:</strong> Used to send signals to control things like LEDs, motors, or buzzers. The microcontroller "talks" here.</li>
+            </ul>
+            <p><strong>Connection to Scratch/C:</strong></p>
+            <ul>
+                <li><strong>Input Pins</strong> are like Scratch's <strong>Sensing</strong> blocks (e.g., <code>key pressed?</code>, <code>touching color?</code>) or C's `scanf()` reading user input. But instead of text, it's a signal from a physical sensor. 👁️‍🗨️⌨️</li>
+                <li><strong>Output Pins</strong> are like Scratch's <strong>Motion</strong> or <strong>Looks</strong> blocks (e.g., <code>move steps</code>, <code>switch costume</code>) or C's `printf()` displaying text. But instead of text on screen, it's a physical action. 🚶‍♀️👗💬</li>
+                <li>The code we write for microcontrollers (often in C) uses `if/else`, `loops`, and `variables` to process inputs and control outputs, just like you've learned! 💻</li>
+            </ul>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: "Smart Room" Design 🏠💡🤝</h4>
+                <p><strong>Activity:</strong> In pairs, imagine a "smart room." What inputs (sensors) would you want in the room (e.g., light sensor, motion sensor, temperature sensor)? What outputs (actuators) would you want to control (e.g., lights, fan, door lock)? Discuss how a microcontroller would connect these inputs and outputs. 💡🚪</p>
+                <p><strong>Goal:</strong> Apply the concept of inputs and outputs to a real-world scenario. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Identify I/O 🔍</h4>
+                <p>For each device, identify what would be an "input" and what would be an "output" for its microcontroller: 🤔</p>
+                <ol>
+                    <li><strong>Automatic Hand Dryer:</strong> 🌬️
+                        <ul><li>Input: ?</li><li>Output: ?</li></ul>
+                    </li>
+                    <li><strong>Smart Doorbell:</strong> 🔔
+                        <ul><li>Input: ?</li><li>Output: ?</li></ul>
+                    </li>
+                    <li><strong>Robot Vacuum Cleaner:</strong> 🧹
+                        <ul><li>Input: ?</li><li>Output: ?</li></ul>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Microcontroller Flowchart 🗺️✍️</h4>
+                <p>Draw a simple flowchart for a microcontroller controlling a "smart light" that turns on when it gets dark and turns off when it's bright. Use the flowchart symbols we learned on Day 10. Think about the input (light sensor) and output (LED/light). 💡🌑☀️</p>
+            </div>
+        </div>
+
+        <!-- Day 17 -->
+        <div class="slide" id="slide-17">
+            <div class="day-header">Day 17: Basic Electronics: Circuits, LEDs, Resistors</div>
+            <h2 class="slide-title">The Building Blocks of Electronics! 🧱⚡</h2>
+            <h3>Lesson Notes: Basic Electronics 🔌</h3>
+            <p>Before we connect anything to our microcontrollers, we need to understand some basic electronics. Don't worry, we'll keep it simple and safe! Today, we'll learn about circuits, LEDs, and resistors. 💡🛡️</p>
+
+            <h4>Electricity and Circuits ⚡🔄</h4>
+            <p>Electricity is the flow of tiny particles called electrons. For electricity to do work (like lighting an LED), it needs a complete path, called a <strong>Circuit</strong>. 🛤️</p>
+            <ul>
+                <li><span class="emoji">🔋</span> <strong>Power Source:</strong> Provides the electricity (e.g., a battery, or our microcontroller). Has a positive (+) and negative (-) side.</li>
+                <li><span class="emoji">〰️</span> <strong>Conductors:</strong> Materials that allow electricity to flow easily (e.g., wires, copper).</li>
+                <li><span class="emoji">🚫</span> <strong>Insulators:</strong> Materials that block electricity (e.g., plastic, rubber).</li>
+                <li><span class="emoji">💡</span> <strong>Load:</strong> The component that uses the electricity to do something (e.g., an LED, a motor).</li>
+                <li><span class="emoji">✅</span> <strong>Closed Circuit:</strong> A complete loop where electricity can flow from the positive side of the power source, through the load, and back to the negative side.</li>
+                <li><span class="emoji">❌</span> <strong>Open Circuit:</strong> A broken path where electricity cannot flow.</li>
+            </ul>
+
+            <h4>LEDs (Light Emitting Diodes) 💡</h4>
+            <p>An LED is a special type of light bulb that uses very little power. It has two "legs" or "leads":</p>
+            <ul>
+                <li><span class="emoji">➕</span> <strong>Anode (+):</strong> The longer leg, connects to the positive side of the circuit.</li>
+                <li><span class="emoji">➖</span> <strong>Cathode (-):</strong> The shorter leg, connects to the negative side (ground).</li>
+            </ul>
+            <p><strong>Important:</strong> LEDs only work if electricity flows in the correct direction! And they need a resistor to protect them. ⚠️</p>
+
+            <h4>Resistors 🛡️</h4>
+            <p>A resistor is a component that <strong>resists</strong> the flow of electricity. Why do we need it? 🤔</p>
+            <ul>
+                <li><strong>Protection:</strong> LEDs are delicate! If too much electricity flows through them, they will burn out. A resistor limits the current, protecting the LED. 🔥🚫</li>
+                <li><strong>Control:</strong> Resistors can also be used to control how much electricity goes to different parts of a circuit. ⚙️</li>
+            </ul>
+            <p>Resistors have colored bands that tell you their value (how much they resist). We'll usually use common values like 220 Ohm or 330 Ohm for LEDs. 🌈</p>
+
+            <p><strong>Connection to Programming:</strong> When we program a microcontroller to turn an LED on or off, we're essentially telling it to complete or break a circuit path through its output pins. Understanding these basic electronic components is crucial for building physical computing projects. 💻🔌</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Circuit Diagramming 🗺️✍️🤝</h4>
+                <p><strong>Activity:</strong> In pairs, draw a simple circuit diagram for an LED connected to a battery (or a simulated power source) with a resistor. Label the positive/negative terminals, LED legs, and resistor. Discuss what would happen if you removed the resistor or connected the LED backward. 🔋💡🛡️</p>
+                <p><strong>Goal:</strong> Visualize and understand the components and flow of a basic circuit. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Build a Simple LED Circuit (Simulated) 💡🛠️</h4>
+                <p>Using an online circuit simulator (like <a href="https://www.tinkercad.com/circuits" target="_blank" class="text-blue-600 hover:underline">Tinkercad Circuits</a> or <a href="https://www.falstad.com/circuit/" target="_blank" class="text-blue-600 hover:underline">Falstad Circuit Simulator</a>): 🌐</p>
+                <ol>
+                    <li>Drag a battery, an LED, and a resistor (e.g., 220 Ohm) onto the workspace. 🔋💡🛡️</li>
+                    <li>Connect them to form a closed circuit: Battery (+) to Resistor, Resistor to LED Anode (long leg), LED Cathode (short leg) to Battery (-). 🔌</li>
+                    <li>Start the simulation. Does the LED light up? ✅</li>
+                    <li>Experiment: Try changing the resistor value. What happens? Try removing the resistor. (Be careful, in real life, this would burn out the LED!). 🧪⚠️</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Circuit Safety & Components ⚡✍️</h4>
+                <ol>
+                    <li>Why is it important to use a resistor with an LED? 🤔</li>
+                    <li>What happens if you connect an LED backward? 🔄</li>
+                    <li>Draw a simple sketch of a "breadboard" (a common tool for building circuits without soldering) and explain its purpose. (You can research this if you haven't seen one yet). 🍞🔌</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 18 -->
+        <div class="slide" id="slide-18">
+            <div class="day-header">Day 18: Digital vs. Analog Signals & Sensors</div>
+            <h2 class="slide-title">How Computers Understand the World! 🌎🧠</h2>
+            <h3>Lesson Notes: Digital, Analog, and Sensors 0️⃣1️⃣〰️</h3>
+            <p>When microcontrollers interact with the world, they use different types of signals. Today, we'll learn about <strong>Digital</strong> and <strong>Analog</strong> signals, and how <strong>Sensors</strong> use them to gather information. 📡</p>
+
+            <h4>Digital Signals 0️⃣1️⃣</h4>
+            <p>Digital signals are like an "on" or "off" switch. They have only two possible states: HIGH (on, 1, 5 Volts) or LOW (off, 0, 0 Volts). Think of a light switch: it's either on or off, no in-between. 💡开关</p>
+            <ul>
+                <li><strong>Examples:</strong> A button press (pressed/not pressed) <span class="emoji">🔘</span>, a door sensor (open/closed) <span class="emoji">🚪</span>, an LED (on/off) <span class="emoji">💡</span>.</li>
+                <li><strong>Microcontroller Pins:</strong> Many pins on a microcontroller are "digital pins" that can read or send digital signals. 📍</li>
+            </ul>
+
+            <h4>Analog Signals 〰️</h4>
+            <p>Analog signals are continuous, meaning they can have a wide range of values, not just two. Think of a dimmer switch for a light: you can make the light brighter or dimmer gradually. 💡调光器</p>
+            <ul>
+                <li><strong>Examples:</strong> Temperature (can be 20.1°C, 20.2°C, etc.) <span class="emoji">🌡️</span>, light intensity (not just dark/light, but shades in between) <span class="emoji">☀️</span>, sound volume <span class="emoji">🔊</span>.</li>
+                <li><strong>Microcontroller Pins:</strong> Some pins are "analog pins" that can read these varying signals. Microcontrollers convert analog signals into digital numbers so they can process them. 🔢</li>
+            </ul>
+            <p><strong>Connection:</strong> Digital is like a "boolean" (True/False) in C or a "touching?" block in Scratch. Analog is like a "variable" that can hold many different numbers, similar to a "distance to mouse-pointer" block giving a range of values. 🤝</p>
+
+            <h4>Sensors 👁️‍🗨️👂</h4>
+            <p>Sensors are devices that detect and respond to events or changes in the physical environment. They convert physical phenomena (like light, temperature, pressure) into electrical signals that a microcontroller can read. 📡</p>
+            <ul>
+                <li><strong>Digital Sensors:</strong>
+                    <ul>
+                        <li><span class="emoji">👆</span> <strong>Button:</strong> Sends HIGH when pressed, LOW when not.</li>
+                        <li><span class="emoji">🚶‍♂️</span> <strong>Motion Sensor (PIR):</strong> Sends HIGH when motion is detected, LOW when not.</li>
+                        <li><span class="emoji">🧲</span> <strong>Reed Switch:</strong> Sends HIGH/LOW based on a magnet's presence (e.g., for door open/closed).</li>
+                    </ul>
+                </li>
+                <li><strong>Analog Sensors:</strong>
+                    <ul>
+                        <li><span class="emoji">☀️</span> <strong>Light Sensor (Photoresistor/LDR):</strong> Resistance changes with light, giving a range of voltage values.</li>
+                        <li><span class="emoji">🌡️</span> <strong>Temperature Sensor (Thermistor):</strong> Resistance changes with temperature, giving a range of voltage values.</li>
+                        <li><span class="emoji"> knob</span> <strong>Potentiometer (Knob):</strong> Changes resistance as you turn it, giving a range of voltage values.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong>Connection:</strong> Sensors are the "eyes" and "ears" of our smart devices and robots. They provide the input data that our microcontroller's code (using loops and conditionals) will process to make decisions and control outputs. 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Digital vs. Analog Sorting  sorting</h4>
+                <p><strong>Activity:</strong> In pairs, list 5-7 things that produce a signal (e.g., a microphone, a thermometer, a light switch, a volume knob, a smoke detector). For each, decide if it produces a digital or analog signal and explain why. 🎙️🌡️💡🔊💨</p>
+                <p><strong>Goal:</strong> Differentiate between digital and analog signals in real-world contexts. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Sensor Matching 🔗</h4>
+                <p>Match the sensor to the type of signal it primarily provides: 🤔</p>
+                <ol>
+                    <li>Temperature Sensor</li>
+                    <li>Push Button</li>
+                    <li>Light Sensor</li>
+                    <li>Motion Sensor</li>
+                </ol>
+                <p><strong>Signal Types:</strong> Digital, Analog</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Smart Device with Sensors ✍️</h4>
+                <p>Design a simple "smart device" that uses at least one digital sensor and one analog sensor. Describe: 💡</p>
+                <ol>
+                    <li>What is the device? 🏷️</li>
+                    <li>What problem does it solve? ❓</li>
+                    <li>Which digital sensor would it use and why? 0️⃣1️⃣</li>
+                    <li>Which analog sensor would it use and why? 〰️</li>
+                    <li>What would be its output(s)? 📤</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 19 -->
+        <div class="slide" id="slide-19">
+            <div class="day-header">Day 19: Actuators (LED, Buzzer, Motor Concepts)</div>
+            <h2 class="slide-title">Making Things Happen in the Real World! 💪🔊💡</h2>
+            <h3>Lesson Notes: Actuators ⚙️</h3>
+            <p>Yesterday, we learned about sensors, which are the inputs for our microcontroller. Today, we'll focus on <strong>Actuators</strong>, which are the outputs! Actuators are devices that take an electrical signal from a microcontroller and convert it into a physical action (light, sound, motion). ⚡➡️ physicality</p>
+
+            <h4>What are Actuators? 🛠️</h4>
+            <p>An actuator is a component that is responsible for moving or controlling a mechanism or system. It acts upon an environment by converting a control signal (from a microcontroller) into a physical phenomenon such as motion, light, or sound. ⚙️</p>
+            <p><strong>Think of them as:</strong> The "muscles" or "voices" of your smart devices and robots. 💪🗣️</p>
+
+            <h4>Common Actuators:</h4>
+            <ul>
+                <li><span class="emoji">💡</span> <strong>LED (Light Emitting Diode):</strong> We've seen this! It lights up when current flows through it. A digital output (HIGH/LOW) can turn it on/off. Analog signals (using a technique called PWM - Pulse Width Modulation) can control its brightness. 💡</li>
+                <li><span class="emoji">🔊</span> <strong>Buzzer:</strong> Produces sound. A digital output can turn it on/off for a simple beep. More advanced buzzers or speakers can play different tones or melodies with varying signals. 🎶</li>
+                <li><span class="emoji">⚙️</span> <strong>Motor:</strong> Creates motion.
+                    <ul>
+                        <li><span class="emoji">🌀</span> <strong>DC Motor:</strong> Spins continuously in one direction when power is applied. Reversing polarity reverses direction. Digital outputs can turn it on/off.</li>
+                        <li><span class="emoji">📐</span> <strong>Servo Motor:</strong> Can move to a specific angle (e.g., 0 to 180 degrees). Used for precise movements like opening a door or pointing a camera. Needs special signals from the microcontroller.</li>
+                        <li><span class="emoji">👣</span> <strong>Stepper Motor:</strong> Can move in very precise steps, allowing for exact positioning and control.</li>
+                    </ul>
+                </li>
+                <li><span class="emoji"> relay</span> <strong>Relay:</strong> An electronically controlled switch. Used to turn on/off larger electrical devices (like a lamp or fan) that require more power than the microcontroller can directly supply. 🔌</li>
+            </ul>
+
+            <p><strong>Connection to Programming:</strong> Actuators are controlled by the output pins of our microcontroller. Our code (using `if/else` statements and loops) will decide when and how to send signals to these actuators, making our physical projects respond to inputs and perform tasks. This is like the "move" or "say" blocks in Scratch, but in the real world! 💻➡️ physicality</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Actuator Action Brainstorm 💪💡🤝</h4>
+                <p><strong>Activity:</strong> In pairs, revisit your "Smart Device with Sensors" idea from yesterday's assignment. Now, focus on the outputs. For each output you identified, discuss which actuator (LED, buzzer, motor, etc.) would be most suitable and why. How would the microcontroller control it? ⚙️</p>
+                <p><strong>Goal:</strong> Connect sensor inputs to appropriate actuator outputs for functional smart devices. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Actuator Purpose ❓</h4>
+                <p>For each scenario, identify the most suitable actuator: 🤔</p>
+                <ol>
+                    <li>To make a robot arm pick up an object. 🤖🤏</li>
+                    <li>To signal an alarm when smoke is detected. 🚨💨</li>
+                    <li>To show that a device is turned on. 💡✅</li>
+                    <li>To open and close a small automated window. 🪟🔄</li>
+                </ol>
+                <p><strong>Actuator Options:</strong> LED, Buzzer, Servo Motor, DC Motor</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: "Smart Home" Actuator Design 🏠✍️</h4>
+                <p>Imagine a smart home system. List 3 different actuators you would want in your smart home and describe what each one would do and how it would be controlled by a microcontroller (e.g., "The fan (DC Motor) turns on when the temperature sensor reads above 25°C"). 💡🔊⚙️</p>
+            </div>
+        </div>
+
+        <!-- Day 20 -->
+        <div class="slide" id="slide-20">
+            <div class="day-header">Day 20: Connecting Concepts: C to Hardware (Conceptual)</div>
+            <h2 class="slide-title">How C Talks to Microcontrollers! 💻🔌</h2>
+            <h3>Lesson Notes: C and Hardware</h3>
+            <p>You've learned C basics and what microcontrollers, sensors, and actuators are. Today, we'll conceptually connect them: how does C code actually tell a microcontroller what to do? While we won't write direct hardware C today, understanding the bridge is crucial. 🌉</p>
+
+            <h4>Arduino C++ (Simplified C) 🚀</h4>
+            <p>Most microcontrollers, especially Arduino, are programmed using a language very similar to C, often called Arduino C++ (which is a simplified version of C++). This means the C skills you're learning are directly applicable!</p>
+
+            <h4>Conceptual Code Flow (C for Hardware) ⚙️</h4>
+            <p>The structure of a program for a microcontroller often looks very similar to the C programs you've been writing, but with special commands (functions) that interact with the pins.</p>
+            <div class="code-block">
+                <pre><code>// Imagine this is C code for an Arduino microcontroller
+
+// --- Setup Phase (like 'when green flag clicked' or initialization) ---
+void setup() {
+  // Set up an LED connected to digital pin 13 as an OUTPUT
+  pinMode(13, OUTPUT); // Tells Arduino pin 13 will send signals out
+
+  // Set up a button connected to digital pin 2 as an INPUT with internal pull-up
+  pinMode(2, INPUT_PULLUP); // Tells Arduino pin 2 will read signals in
+  
+  // Start serial communication (like printf for debugging)
+  Serial.begin(9600); // Opens a communication channel to your computer
+}
+
+// --- Loop Phase (like 'forever' loop) ---
+void loop() { // Keep doing this forever
+    // Read the button state (INPUT)
+    // If using INPUT_PULLUP, buttonState will be LOW when pressed, HIGH when not pressed.
+    int buttonState = digitalRead(2); // Read the state of pin 2
+
+    // If button is pressed (value is LOW)
+    if (buttonState == LOW) {
+        digitalWrite(13, HIGH); // Turn LED ON (OUTPUT) - Send a HIGH signal
+        Serial.println("Button pressed, LED ON!"); // Print message to Serial Monitor
+    } else { // If button is not pressed (HIGH)
+        digitalWrite(13, LOW);  // Turn LED OFF (OUTPUT) - Send a LOW signal
+        Serial.println("Button not pressed, LED OFF.");
+    }
+
+    delay(100); // Wait a little bit before checking again (like 'wait 0.1 secs' in Scratch)
+}
+</code></pre>
+            </div>
+            <p><strong>Notice the Connections:</strong></p>
+            <ul>
+                <li>`void setup()`: Like the initial setup in Scratch (`when green flag clicked`).</li>
+                <li>`void loop()`: Our familiar "forever" loop.</li>
+                <li>`pinMode(pin, mode)`: Setting up pins, like telling Scratch a sprite is ready to move or sense.</li>
+                <li>`digitalRead(pin)`: Our "sensing" input, like Scratch's `key pressed?` or C's `scanf()`.</li>
+                <li>`digitalWrite(pin, value)`: Our "action" output, like Scratch's `move steps` or C's `printf()`, but now it's turning a physical LED on/off!</li>
+                <li>`delay(milliseconds)`: Just like Scratch's `wait () seconds`.</li>
+                <li>`Serial.begin()` / `Serial.println()`: For debugging, similar to `printf()` in C or `print()` in Python.</li>
+            </ul>
+            <p><strong>Connection:</strong> This conceptual code shows that all the programming logic you've learned (variables, loops, conditionals) is directly applicable to controlling real-world hardware. The only new part is learning the specific commands (functions) that talk to the microcontroller's pins. Your C knowledge is a direct bridge! 🌉</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Code Walkthrough 🗣️🤝</h4>
+                <p><strong>Activity:</strong> In pairs, carefully read through the conceptual C code above. Explain to your partner, in your own words, what each section does and how it relates to Scratch blocks or C concepts you already know. Discuss any parts that are still confusing. 🤔</p>
+                <p><strong>Goal:</strong> Solidify the understanding of how programming logic translates to hardware control. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Pseudocode for a Smart Fan 🌬️✍️</h4>
+                <p>Write "pseudocode" (plain English steps that look like code) for a smart fan that turns on when the temperature is above 25 degrees Celsius and turns off when it's below 25 degrees Celsius. Assume you have a "read_temperature()" function and "turn_fan_on()", "turn_fan_off()" functions. 🌡️</p>
+                <p><strong>Example Start:</strong></p>
+                <pre><code>// Setup:
+Set up temperature sensor as input
+Set up fan as output
+
+// Loop forever:
+  Read current temperature
+  If temperature is greater than 25:
+    Turn fan on
+  Else:
+    Turn fan off
+  Wait a short time
+</code></pre>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: C to Hardware Analogy 🔗✍️</h4>
+                <p>For each Scratch block or C concept, describe its equivalent action/concept when programming a microcontroller to interact with hardware: 🤔</p>
+                <ol>
+                    <li><code>when green flag clicked</code> (Scratch)</li>
+                    <li><code>forever</code> loop (Scratch/C)</li>
+                    <li><code>if () then</code> (Scratch/C)</li>
+                    <li><code>touching (color)?</code> (Scratch) / `scanf()` (C)</li>
+                    <li><code>move 10 steps</code> (Scratch) / `printf()` (C)</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 21 -->
+        <div class="slide" id="slide-21">
+            <div class="day-header">Day 21: Mini-Project: Design a "Smart Device" Concept</div>
+            <h2 class="slide-title">Designing Your Own Smart Invention! 💡✍️</h2>
+            <h3>Lesson Notes: Project Design & Flow 🗺️</h3>
+            <p>Today, you'll apply all the conceptual knowledge from the past week to design your own "Smart Device." You won't build it physically yet, but you'll create a detailed plan and flowchart for how it would work. 📝</p>
+
+            <h4>Project Goal: Smart Device Concept Design 🎯</h4>
+            <p>Design a smart device that solves a small problem or adds convenience. Your design should include:</p>
+            <ul>
+                <li><strong>Device Name & Purpose:</strong> What is it and what does it do? 🏷️❓</li>
+                <li><strong>Inputs (Sensors):</strong> What information does it need from the environment? (e.g., light, temperature, motion, button press). Specify if digital or analog. 👁️‍🗨️👂</li>
+                <li><strong>Outputs (Actuators):</strong> What actions does it perform? (e.g., turn on LED, make sound, move motor). 💪🔊💡</li>
+                <li><strong>Flowchart:</strong> A detailed flowchart showing the logic of your device. This is the "code" plan! 🗺️</li>
+                <li><strong>Connection to Programming Concepts:</strong> Explain how your flowchart uses loops, conditionals, and variables (even if conceptual). 🔄⚖️📦</li>
+            </ul>
+
+            <h4>Tips for Project Design: 💡</h4>
+            <ul>
+                <li><strong>Think Small:</strong> Don't try to design a self-driving car! Start with something simple like a smart night light, an automatic pet feeder, or a simple alarm. 🚗➡️💡🐾🚨</li>
+                <li><strong>Problem-Solution:</strong> What problem are you trying to solve? This helps define your device. ❓➡️✅</li>
+                <li><strong>Clear Logic:</strong> Make sure your flowchart is easy to follow and covers all the main scenarios. 🔍</li>
+                <li><strong>Be Creative!</strong> 🎨</li>
+            </ul>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Idea Pitch & Feedback 🗣️💡🤝</h4>
+                <p><strong>Activity:</strong> In small groups, each person will briefly "pitch" their smart device idea (2-3 minutes). The rest of the group will ask clarifying questions and provide constructive feedback on the feasibility and clarity of the design. Focus on whether the inputs, outputs, and overall concept make sense. 🤔👍</p>
+                <p><strong>Goal:</strong> Refine project ideas through peer feedback and practice explaining technical concepts. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Smart Device Flowcharting 🗺️✍️</h4>
+                <p>Spend the majority of today's class time working on designing your smart device concept and drawing its detailed flowchart. Teachers will be available for guidance. 🧑‍🏫</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Project Reflection & Peer Review Prep 📝🤔</h4>
+                <p>Before tomorrow's peer review, do the following: ✍️</p>
+                <ol>
+                    <li>Review your smart device design and flowchart. Is it complete and clear? ✅</li>
+                    <li>Write down 1-2 strengths of your design. ⭐</li>
+                    <li>Write down 1-2 areas where you might need more help or where you foresee challenges if you were to build it. ⛰️📈</li>
+                    <li>Be ready to present your design and flowchart to your peers. 🗣️</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 22 -->
+        <div class="slide" id="slide-22">
+            <div class="day-header">Day 22: Intro to IoT Platform/Simulator (Tinkercad Circuits)</div>
+            <h2 class="slide-title">Building Virtual Circuits and Code! 🌐💻</h2>
+            <h3>Lesson Notes: Tinkercad Circuits 🛠️</h3>
+            <p>Today, we're finally going to start "building" and "coding" our IoT projects! We'll use an amazing free online simulator called <strong>Tinkercad Circuits</strong>. This allows us to drag and drop virtual components (like Arduino, LEDs, buttons) and write code for them, all without needing physical hardware! 🎮</p>
+
+            <h4>What is Tinkercad Circuits? 🎨</h4>
+            <p>Tinkercad Circuits is a web-based platform that provides a virtual breadboard, Arduino microcontroller, and various electronic components. You can: 🌐</p>
+            <ul>
+                <li><span class="emoji">🖱️</span> <strong>Drag & Drop Components:</strong> Easily add LEDs, resistors, buttons, sensors, and the Arduino board.</li>
+                <li><span class="emoji">🔌</span> <strong>Wire Connections:</strong> Click and drag to make connections between components, just like with real wires.</li>
+                <li><span class="emoji">✍️</span> <strong>Write Code:</strong> Write code (in Blocks, or text-based C++ for Arduino) directly in the simulator.</li>
+                <li><span class="emoji">▶️</span> <strong>Simulate:</strong> Run your circuit and code to see how it behaves in real-time.</li>
+            </ul>
+            <p><strong>Why use a simulator?</strong></p>
+            <ul>
+                <li><span class="emoji">SAFE</span> <strong>Safe:</strong> No risk of damaging components or getting shocked. 🚫⚡</li>
+                <li><span class="emoji">ACCESSIBLE</span> <strong>Accessible:</strong> Everyone can build circuits and code without needing expensive hardware. 🆓</li>
+                <li><span class="emoji">EXPERIMENT</span> <strong>Experimentation:</strong> Easily try out different ideas and fix mistakes. 🧪🐞</li>
+                <li><span class="emoji">VISUAL</span> <strong>Visual Learning:</strong> See how components connect and how code affects them directly. 👀💡</li>
+            </ul>
+
+            <h4>Getting Started with Tinkercad Circuits: 🚀</h4>
+            <ol>
+                <li>Go to <a href="https://www.tinkercad.com/circuits" target="_blank" class="text-blue-600 hover:underline">Tinkercad Circuits</a> and log in/create an account. 🌐</li>
+                <li>Click "Create new Circuit." 🆕</li>
+                <li>Explore the Components panel on the right. 🔍</li>
+                <li>Drag an "Arduino Uno R3" board and a "Breadboard" onto the workspace. 🧱</li>
+            </ol>
+            <p><strong>Arduino Board Basics:</strong></p>
+            <ul>
+                <li><span class="emoji">0️⃣-1️⃣3️⃣</span> <strong>Digital Pins (0-13):</strong> Can be set as INPUTs or OUTPUTs (HIGH/LOW).</li>
+                <li><span class="emoji">A0-A5</span> <strong>Analog Pins (A0-A5):</strong> Used to read analog sensor values.</li>
+                <li><span class="emoji">GND</span> <strong>GND (Ground):</strong> The negative connection for your circuit.</li>
+                <li><span class="emoji">5V/3.3V</span> <strong>5V / 3.3V:</strong> Power supply pins for your components.</li>
+            </ul>
+
+            <p><strong>Connection:</strong> Tinkercad Circuits allows us to bring our Scratch-to-C logic to life in a simulated hardware environment. We'll use the same conditional (`if/else`) and loop (`for`/`while`) structures to control virtual LEDs, read virtual buttons, and build our "smart devices." 🌉</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Tinkercad Exploration 🔍🤝</h4>
+                <p><strong>Activity:</strong> In pairs, spend 15-20 minutes exploring Tinkercad Circuits. Try dragging different components onto the workspace, connecting them (even if randomly), and seeing what happens. Find the "Code" button and switch between "Blocks" and "Text" (C++). Discuss your observations. 💡</p>
+                <p><strong>Goal:</strong> Get comfortable with the Tinkercad interface and its capabilities. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Simple LED Blink Circuit (Tinkercad) 💡✨</h4>
+                <p>In Tinkercad Circuits, create a new circuit:</p>
+                <ol>
+                    <li>Drag an Arduino Uno and a breadboard. 🧱</li>
+                    <li>Drag an LED and a 220 Ohm resistor onto the breadboard. 💡🛡️</li>
+                    <li>Connect the LED's long leg (anode) to a digital pin on the Arduino (e.g., Pin 13, which often has a built-in LED). Connect the resistor to the LED's short leg (cathode), and the other end of the resistor to a GND (Ground) pin on the Arduino. 🔌</li>
+                    <li>Click the "Code" button. Select "Text" and continue. ✍️</li>
+                    <li>You'll see some example code. Find the part that says <code>digitalWrite(LED_BUILTIN, HIGH);</code> and <code>digitalWrite(LED_BUILTIN, LOW);</code>. This is the C++ equivalent of turning an LED on/off. 💻</li>
+                    <li>Start the simulation. Does your LED blink? ✅</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Tinkercad Component Research 📚🔍</h4>
+                <p>In Tinkercad Circuits, look through the components library. Find three components you haven't used yet (e.g., a push button, a photoresistor, a servo motor). Briefly describe what each component is used for and how you think it might connect to an Arduino. 🤔</p>
+            </div>
+        </div>
+
+        <!-- Day 23 -->
+        <div class="slide" id="slide-23">
+            <div class="day-header">Day 23: Programming an LED (Blink Example in Simulator)</div>
+            <h2 class="slide-title">Your First Hardware Program: Making an LED Blink! 💡💻</h2>
+            <h3>Lesson Notes: Arduino C++ Basics & Blink ✨</h3>
+            <p>Today, we'll write our first actual code for a microcontroller in Tinkercad Circuits! We'll use a simplified version of C++ (the language Arduino uses) to make an LED blink. This is the "Hello, World!" of hardware programming! 👋</p>
+
+            <h4>Arduino Program Structure (C++) ⚙️</h4>
+            <p>Every Arduino program has two main parts:</p>
+            <ul>
+                <li><code>void setup() { ... }</code>: This code runs only once when the Arduino first turns on or resets. It's used for setting up pins (input/output) and starting initial values. (Like <code>when green flag clicked</code> and initial variable setup in Scratch). 🚀</li>
+                <li><code>void loop() { ... }</code>: This code runs repeatedly, forever. This is where your main program logic goes. (Like the <code>forever</code> loop in Scratch). ♾️</li>
+            </ul>
+
+            <h4>Key Arduino Commands: 🔑</h4>
+            <ul>
+                <li><code>pinMode(pinNumber, mode);</code>: Tells the Arduino whether a specific pin will be used as an <code>INPUT</code> or an <code>OUTPUT</code>.
+                    <ul>
+                        <li><code>pinNumber</code>: The number of the pin you're using (e.g., 13). 🔢</li>
+                        <li><code>mode</code>: <code>INPUT</code> or <code>OUTPUT</code>. ➡️⬅️</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code>pinMode(13, OUTPUT); // Set pin 13 as an output
+</code></pre>
+                    </div>
+                </li>
+                <li><code>digitalWrite(pinNumber, value);</code>: Sends a digital signal (HIGH or LOW) to an output pin.
+                    <ul>
+                        <li><code>pinNumber</code>: The pin you're controlling. 📍</li>
+                        <li><code>value</code>: <code>HIGH</code> (turns it on, 5V) or <code>LOW</code> (turns it off, 0V). 💡❌</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code>digitalWrite(13, HIGH); // Turn LED on
+digitalWrite(13, LOW);  // Turn LED off
+</code></pre>
+                    </div>
+                </li>
+                <li><code>delay(milliseconds);</code>: Pauses the program for a specified number of milliseconds (1000 milliseconds = 1 second). (Like <code>wait () seconds</code> in Scratch). ⏳</li>
+                    <div class="code-block">
+                        <pre><code>delay(1000); // Wait for 1 second
+</code></pre>
+                    </div>
+                </li>
+            </ul>
+
+            <h4>Blink Code Example: 💡✨</h4>
+            <div class="code-block">
+                <pre><code>// This code makes an LED connected to digital pin 13 blink on and off.
+
+void setup() {
+  // Initialize digital pin 13 as an output.
+  pinMode(13, OUTPUT);
+}
+
+// The loop function runs over and over again forever
+void loop() {
+  digitalWrite(13, HIGH);   // Turn the LED on (HIGH is the voltage level)
+  delay(1000);              // Wait for a second
+  digitalWrite(13, LOW);    // Turn the LED off by making the voltage LOW
+  delay(1000);              // Wait for a second
+}
+</code></pre>
+            </div>
+
+            <p><strong>Connection:</strong> The `setup()` function is like the initial setup in Scratch (`when green flag clicked`). The `loop()` function is your `forever` loop. `digitalWrite()` is your action block, and `delay()` is your wait block. You're using familiar logic, just with new words! 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Code Explanation 🗣️🤝</h4>
+                <p><strong>Activity:</strong> In pairs, one person explains each line of the Blink code to the other, describing what it does and how it relates to Scratch or C concepts. Then switch roles and explain it again. Discuss why the `pinMode` is in `setup()` and `digitalWrite` is in `loop()`. 🤔</p>
+                <p><strong>Goal:</strong> Deepen understanding of Arduino C++ syntax and program flow. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Modify the Blink Rate ⏱️💡</h4>
+                <p>In Tinkercad Circuits, open your Blink circuit from yesterday or create a new one. Modify the code to make the LED blink faster, then slower. Try making it blink with different on/off times (e.g., 0.5 seconds on, 2 seconds off). 🧪</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Traffic Light Simulation (Conceptual Code) 🚦✍️</h4>
+                <p>Imagine you have three LEDs: Red, Yellow, Green. Write pseudocode (like the Blink example, but for three LEDs) for a simple traffic light sequence: 🚥</p>
+                <ol>
+                    <li>Green LED on for 5 seconds. 🟢</li>
+                    <li>Yellow LED on for 2 seconds. 🟡</li>
+                    <li>Red LED on for 5 seconds. 🔴</li>
+                    <li>Repeat forever. ♾️</li>
+                </ol>
+                <p>Think about which LED needs to be HIGH and which need to be LOW at each step. 🤔</p>
+            </div>
+        </div>
+
+        <!-- Day 24 -->
+        <div class="slide" id="slide-24">
+            <div class="day-header">Day 24: Reading a Button Input (Simulator)</div>
+            <h2 class="slide-title">Making Your Circuit Respond to You! 👆💡</h2>
+            <h3>Lesson Notes: Digital Input with Buttons 🔘</h3>
+            <p>Yesterday, we made an LED blink. Today, we'll make our circuit interactive by reading input from a <strong>Push Button</strong>. This is where our `if/else` logic becomes very powerful in the physical world! 💪</p>
+
+            <h4>Connecting a Push Button 🔌</h4>
+            <p>A push button is a simple digital sensor. When you press it, it completes a circuit. When you release it, it breaks the circuit. To connect it to an Arduino, we usually need a "pull-down" or "pull-up" resistor to make sure the pin has a clear HIGH or LOW state when the button is not pressed. 🛡️</p>
+            <ul>
+                <li><strong>Pull-up Resistor:</strong> Connects the input pin to 5V. When the button is NOT pressed, the pin reads HIGH. When pressed, it connects to GND, so the pin reads LOW. (This is common with Arduino's internal pull-up). ⬆️⬇️</li>
+                <li><strong>Pull-down Resistor:</strong> Connects the input pin to GND. When the button is NOT pressed, the pin reads LOW. When pressed, it connects to 5V, so the pin reads HIGH. ⬇️⬆️</li>
+            </ul>
+            <p>For simplicity in Tinkercad, we can often just connect one side of the button to a digital pin and the other to GND, and use Arduino's internal pull-up resistor feature.  simplifies</p>
+
+            <h4>Key Arduino Commands for Input: 🔑📥</h4>
+            <ul>
+                <li><code>pinMode(pinNumber, mode);</code>: Still used, but now <code>mode</code> will be <code>INPUT</code> or <code>INPUT_PULLUP</code>.
+                    <ul>
+                        <li><code>INPUT</code>: Requires an external pull-down resistor. ⬇️</li>
+                        <li><code>INPUT_PULLUP</code>: Uses Arduino's built-in pull-up resistor, simplifies wiring. (Pin reads HIGH when button is open, LOW when pressed). ⬆️</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code>pinMode(2, INPUT_PULLUP); // Set pin 2 as an input with internal pull-up
+</code></pre>
+                    </div>
+                </li>
+                <li><code>digitalRead(pinNumber);</code>: Reads the digital state (HIGH or LOW) of an input pin. It returns <code>HIGH</code> or <code>LOW</code>.
+                    <div class="code-block">
+                        <pre><code>int buttonState = digitalRead(2); // Read the state of pin 2
+</code></pre>
+                    </div>
+                </li>
+            </ul>
+
+            <h4>Button Read Example: 🔘💻</h4>
+            <div class="code-block">
+                <pre><code>// This code reads the state of a button and prints it to the Serial Monitor.
+
+int buttonPin = 2; // The digital pin the button is connected to
+
+void setup() {
+  // Initialize the button pin as an input with an internal pull-up resistor.
+  pinMode(buttonPin, INPUT_PULLUP);
+  // Start serial communication at 9600 bits per second:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Read the state of the button
+  // If using INPUT_PULLUP, buttonState will be LOW when pressed, HIGH when not pressed.
+  int buttonState = digitalRead(buttonPin);
+
+  // Print the button state to the Serial Monitor
+  if (buttonState == LOW) { // If button is pressed (LOW)
+    Serial.println("Button is pressed!");
+  } else { // If button is not pressed (HIGH)
+    Serial.println("Button is NOT pressed.");
+  }
+
+  delay(100); // Small delay to prevent too many readings
+}
+</code></pre>
+            </div>
+            <p><strong>Serial Monitor:</strong> In Tinkercad, click the "Serial Monitor" button at the bottom of the code editor to see the messages printed by <code>Serial.println()</code>. This is like your C `printf()` output! 💬</p>
+
+            <p><strong>Connection:</strong> Reading a button is exactly like using a "key pressed?" or "mouse down?" sensing block in Scratch, or `scanf()` in C that returns a specific value. We then use `if/else` to make decisions based on that input, just like we practiced! 🤝</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Button Logic Discussion 🧠🤝</h4>
+                <p><strong>Activity:</strong> In pairs, discuss why we use `INPUT_PULLUP` and why `LOW` means "pressed" in that case. What would happen if you didn't use a pull-up or pull-down resistor? (Hint: It's called "floating"). 🤔</p>
+                <p><strong>Goal:</strong> Understand the importance of pull-up/pull-down resistors for reliable digital input. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Button State to Serial Monitor (Tinkercad) 🔘💬</h4>
+                <p>In Tinkercad Circuits:</p>
+                <ol>
+                    <li>Create a new circuit with an Arduino and a push button. 🧱🔘</li>
+                    <li>Connect one leg of the button to digital pin 2 on the Arduino. 🔌</li>
+                    <li>Connect the other leg of the button to GND. 🔌</li>
+                    <li>Open the code editor, select "Text," and copy the "Button Read Example" code above. ✍️</li>
+                    <li>Start the simulation and open the Serial Monitor. Press and release the button. Do you see the messages change? ✅</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Button-Controlled Counter (Conceptual) 🔢✍️</h4>
+                <p>Imagine you want to build a counter that increases by 1 every time a button is pressed. Write pseudocode (like the Arduino C++ style) for this. You'll need a variable to store the count, an `if` statement to check the button, and a way to increment the count and print it. ➕</p>
+                <p><strong>Hint:</strong> You might need to add a small delay and a way to prevent the count from increasing multiple times if the button is held down (we'll cover "debouncing" later, but for now, a simple delay after incrementing is fine). ⏳</p>
+            </div>
+        </div>
+
+        <!-- Day 25 -->
+        <div class="slide" id="slide-25">
+            <div class="day-header">Day 25: Combining Input & Output: Button Controls LED (Simulator)</div>
+            <h2 class="slide-title">Your First Interactive Hardware Project! 💡👆</h2>
+            <h3>Lesson Notes: Input-Output Integration 🤝</h3>
+            <p>Today is a milestone! We'll combine our knowledge of reading button inputs and controlling LED outputs to create a truly interactive circuit. When you press the button, the LED will turn on, and when you release it, the LED will turn off. This is the core of many smart devices! 🎮</p>
+
+            <h4>Circuit Setup: Button and LED 🔌💡🔘</h4>
+            <p>You'll need both an LED (with its resistor) and a push button connected to your Arduino in Tinkercad. Make sure they are connected to different digital pins. 📍</p>
+            <ul>
+                <li><strong>LED:</strong> Anode (long leg) to a digital pin (e.g., Pin 13), Cathode (short leg) through a 220 Ohm resistor to GND. 💡🛡️</li>
+                <li><strong>Button:</strong> One leg to a digital pin (e.g., Pin 2), the other leg to GND. (We'll use `INPUT_PULLUP` for the button pin). 🔘🔌</li>
+            </ul>
+
+            <h4>Combined Code Logic: 💻</h4>
+            <p>The logic is simple: In our `loop()`, we'll constantly read the button's state. If the button is pressed (LOW), we'll set the LED pin to HIGH. If the button is not pressed (HIGH), we'll set the LED pin to LOW. 🔄</p>
+
+            <div class="code-block">
+                <pre><code>// This code turns an LED on when a button is pressed, and off when released.
+
+int buttonPin = 2;  // The digital pin the button is connected to
+int ledPin = 13;    // The digital pin the LED is connected to
+
+void setup() {
+  // Set up the button pin as an input with internal pull-up.
+  pinMode(buttonPin, INPUT_PULLUP);
+  // Set up the LED pin as an output.
+  pinMode(ledPin, OUTPUT);
+
+  // Start serial communication (optional, for debugging)
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Read the state of the button
+  int buttonState = digitalRead(buttonPin);
+
+  // If the button is pressed (LOW, because of INPUT_PULLUP)
+  if (buttonState == LOW) {
+    digitalWrite(ledPin, HIGH); // Turn LED ON
+    Serial.println("Button pressed: LED ON");
+  } else { // If the button is not pressed (HIGH)
+    digitalWrite(ledPin, LOW);  // Turn LED OFF
+    Serial.println("Button not pressed: LED OFF");
+  }
+
+  delay(50); // Small delay to prevent rapid flickering/readings
+}
+</code></pre>
+            </div>
+
+            <p><strong>Connection:</strong> This project is a direct translation of the `if/else` logic you mastered in Scratch and C, but now it's controlling physical components! The `digitalRead()` is your "sensing" input, and `digitalWrite()` is your "action" output, all controlled by your conditional logic within a continuous loop. 🌉</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Debugging Challenge 🐞🤝</h4>
+                <p><strong>Activity:</strong> In pairs, build the Button-LED circuit and code in Tinkercad. Intentionally introduce a "bug" (e.g., reverse the LED connections, forget the resistor, change `HIGH` to `LOW` in the `if` statement). Then, switch with another pair and try to find and fix their bug. Discuss strategies for debugging circuits and code. 🔍🛠️</p>
+                <p><strong>Goal:</strong> Practice debugging skills in a hardware/software context and learn from common mistakes. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Button-Controlled Blink 💡🔘✨</h4>
+                <p>Modify the Button-LED code so that when the button is pressed, the LED starts blinking (on for 0.2s, off for 0.2s). When the button is released, the LED should turn off completely. 🔄</p>
+                <p><strong>Hint:</strong> You'll need a `delay()` inside your `if` block. ⏳</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Smart Doorbell Logic 🔔✍️</h4>
+                <p>Draw a flowchart and write pseudocode for a "smart doorbell." When a button is pressed, a buzzer should make a sound for 1 second, and an LED should light up for 3 seconds. The LED should stay on longer than the buzzer. After 3 seconds, both should turn off. 🔊💡</p>
+                <p><strong>Think about:</strong> What happens when the button is pressed? What happens after a delay? What happens to the LED and buzzer? 🤔</p>
+            </div>
+        </div>
+
+        <!-- Day 26 -->
+        <div class="slide" id="slide-26">
+            <div class="day-header">Day 26: Introduction to Analog Sensors (Ultrasonic Concepts)</div>
+            <h2 class="slide-title">Measuring the World: Distance, Light, and More! 📏☀️</h2>
+            <h3>Lesson Notes: Analog Sensors and Ultrasonic 〰️🔊</h3>
+            <p>So far, we've mostly dealt with digital signals (on/off). Today, we'll introduce <strong>Analog Sensors</strong>, which give us a range of values, allowing our devices to measure things like distance, light levels, or temperature. We'll focus conceptually on the <strong>Ultrasonic Distance Sensor</strong>. 📊</p>
+
+            <h4>Analog Sensor Recap 🧠</h4>
+            <p>Remember, analog signals are continuous. Microcontrollers have special "Analog Input" pins that can read these varying voltages and convert them into numbers (e.g., 0-1023 for Arduino). This number represents the strength of the signal. 🔢</p>
+            <ul>
+                <li><span class="emoji">☀️</span> <strong>Light Sensor (Photoresistor/LDR):</strong> The resistance changes with light. We read a voltage that varies with brightness.</li>
+                <li><span class="emoji">🌡️</span> <strong>Temperature Sensor (Thermistor):</strong> Resistance changes with temperature. We read a voltage that varies with heat.</li>
+                <li><span class="emoji"> knob</span> <strong>Potentiometer (Knob):</strong> A variable resistor. Turning the knob changes the resistance, and thus the voltage read by the analog pin.</li>
+            </ul>
+
+            <h4>Ultrasonic Distance Sensor (HC-SR04) - Conceptual 📏🔊</h4>
+            <p>This is a fantastic sensor for robotics and IoT! It measures distance by sending out a high-frequency sound wave (ultrasound) and listening for the echo. The time it takes for the sound to return tells us how far away an object is. 🤖💡</p>
+            <ul>
+                <li><strong>How it works:</strong>
+                    <ol>
+                        <li>The sensor sends out a short burst of ultrasound (the "trigger"). 🔊</li>
+                        <li>The sound travels, hits an object, and bounces back (the "echo"). ↩️</li>
+                        <li>The sensor measures the time between sending the sound and receiving the echo. ⏱️</li>
+                        <li>Since we know the speed of sound, we can calculate the distance: <code>Distance = (Time * Speed of Sound) / 2</code> (divide by 2 because the sound travels there and back). ➕➖✖️➗</li>
+                    </ol>
+                </li>
+                <li><strong>Pins:</strong> Typically has 4 pins: VCC (power), GND (ground), Trig (trigger), Echo (echo). 🔌</li>
+                <li><strong>Output:</strong> The Echo pin produces a pulse whose duration (length of time it's HIGH) is proportional to the distance. We use special Arduino functions to measure this pulse duration. 📊</li>
+            </ul>
+            <p><strong>Connection to Programming:</strong> Reading an analog sensor or an ultrasonic sensor is more complex than a simple button, but it still uses the same core programming logic. We read a number (distance, light level), store it in a variable, and then use `if/else` statements to make decisions based on that number (e.g., "IF distance < 10cm THEN stop motor"). 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Sensor Application Ideas 💡🤝</h4>
+                <p><strong>Activity:</strong> In pairs, brainstorm 2-3 creative ways you could use an ultrasonic distance sensor in a smart device or robot. For each idea, describe what the device would be, what problem it solves, and how the distance information would be used in the code (e.g., "If distance is less than X, do Y"). ✍️</p>
+                <p><strong>Goal:</strong> Think critically about how analog data can be used to control actions. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Analog Sensor Reading (Conceptual) 💡✍️</h4>
+                <p>Imagine you have a light sensor connected to an analog pin. The sensor reads values from 0 (very dark) to 1023 (very bright). Write pseudocode that: ☀️</p>
+                <ol>
+                    <li>Reads the light sensor value. 📥</li>
+                    <li>If the light value is less than 200 (dark), turn an LED on. 🌑💡</li>
+                    <li>Else (if it's bright), turn the LED off. ☀️❌</li>
+                </ol>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: "Smart Parking Sensor" Flowchart 🚗🅿️✍️</h4>
+                <p>Draw a flowchart for a "smart parking sensor" using an ultrasonic sensor. The device should have: 🗺️</p>
+                <ul>
+                    <li>An ultrasonic sensor to detect a car. 🔊🚗</li>
+                    <li>A green LED that is ON when no car is detected (distance > 50cm). 🟢</li>
+                    <li>A yellow LED that is ON when a car is getting close (distance between 10cm and 50cm). 🟡</li>
+                    <li>A red LED that is ON and a buzzer that beeps rapidly when a car is very close (distance < 10cm). 🔴🚨</li>
+                </ul>
+                <p>Show the logic for how the LEDs and buzzer change based on distance. 🤔</p>
+            </div>
+        </div>
+
+        <!-- Day 27 -->
+        <div class="slide" id="slide-27">
+            <div class="day-header">Day 27: Data Visualization (Simple Charts using C Concepts)</div>
+            <h2 class="slide-title">Making Sense of Sensor Data! 📊🧠</h2>
+            <h3>Lesson Notes: Data Visualization 📈</h3>
+            <p>When our smart devices collect data (like temperature, light, or distance), it's often just a stream of numbers. To truly understand this data, we need to visualize it! Today, we'll explore the concept of <strong>Data Visualization</strong> and how we can represent sensor data using simple charts, conceptually linking it back to C. 🔢➡️🖼️</p>
+
+            <h4>What is Data Visualization? 🤔</h4>
+            <p>Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. 🗺️</p>
+            <p><strong>Why is it important for IoT?</strong></p>
+            <ul>
+                <li><span class="emoji">📈</span> <strong>Understanding Trends:</strong> Is the temperature in your room slowly rising or falling over time?</li>
+                <li><span class="emoji">🚨</span> <strong>Spotting Problems:</strong> Is a sensor suddenly giving strange readings?</li>
+                <li><span class="emoji"> decision</span> <strong>Making Decisions:</strong> If you see your plant's soil moisture is consistently low, you know it needs more water.</li>
+            </ul>
+
+            <h4>Simple Visualization Concepts: 📊</h4>
+            <p>Even without fancy tools, we can think about how to visualize data:</p>
+            <ul>
+                <li><span class="emoji"> bar_chart</span> <strong>Bar Charts:</strong> Good for comparing discrete categories (e.g., number of button presses per hour).</li>
+                <li><span class="emoji"> line_chart</span> <strong>Line Graphs:</strong> Excellent for showing changes over time (e.g., temperature readings throughout the day).</li>
+                <li><span class="emoji"> scatter_plot</span> <strong>Scatter Plots:</strong> Good for showing relationships between two different measurements.</li>
+            </ul>
+
+            <h4>Conceptual C for Data Display: 💻</h4>
+            <p>While we won't build full graphical charts, we can use C's `printf()` function to create very simple text-based visualizations or prepare data for charting.</p>
+            <div class="code-block">
+                <pre><code>// Imagine this is C code receiving temperature data from a sensor
+// We'll use an array to simulate collecting data over time
+
+#include &lt;stdio.h&gt; // For printf
+#include &lt;string.h&gt; // For string manipulation (like creating bars)
+
+int main() {
+    int temperatures[] = {22, 23, 22, 24, 25, 26, 25, 24, 23, 22}; // Example readings
+    int num_readings = sizeof(temperatures) / sizeof(temperatures[0]);
+
+    printf("--- Temperature Readings (Simple Bar Chart) ---\n");
+    for (int i = 0; i < num_readings; i++) {
+        int temp = temperatures[i];
+        // Create a bar using '*' characters, scaled by temperature
+        // Adjust 20 to your desired base for scaling
+        for (int j = 0; j < (temp - 20); j++) {
+            printf("*");
+        }
+        printf(" %d°C\n", temp);
+    }
+
+    printf("\n--- Temperature Trend (Simple Line Plot) ---\n");
+    // This is more conceptual, but imagine plotting points
+    for (int i = 0; i < num_readings; i++) {
+        int temp = temperatures[i];
+        // Print spaces before the '*' to simulate a line graph
+        for (int j = 0; j < (temp - 20); j++) {
+            printf(" ");
+        }
+        printf("Hour %d: *\n", i);
+    }
+
+    // Finding min/max/average (like 'operators' in Scratch)
+    int max_temp = temperatures[0];
+    int min_temp = temperatures[0];
+    int sum_temp = 0;
+
+    for (int i = 0; i < num_readings; i++) {
+        if (temperatures[i] > max_temp) {
+            max_temp = temperatures[i];
+        }
+        if (temperatures[i] < min_temp) {
+            min_temp = temperatures[i];
+        }
+        sum_temp += temperatures[i];
+    }
+    float avg_temp = (float)sum_temp / num_readings;
+
+    printf("\nHighest Temperature: %d°C\n", max_temp);
+    printf("Lowest Temperature: %d°C\n", min_temp);
+    printf("Average Temperature: %.2f°C\n", avg_temp); // .2f means 2 decimal places
+
+    return 0;
+}
+</code></pre>
+            </div>
+            <p><strong>Connection:</strong> Data visualization combines your knowledge of variables (to store data), arrays/lists (to store collections of data over time), loops (to process each data point), and operators (to find averages, min/max). It's about taking raw numbers from sensors and making them meaningful for humans. 🧠</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Data Storytelling 📊🗣️🤝</h4>
+                <p><strong>Activity:</strong> In pairs, imagine you have collected data from a smart device (e.g., how many times a door opened each hour, or the light level in a room throughout the day). Discuss how you would present this data to someone else using a simple chart or graph. What story does the data tell? 🚪💡</p>
+                <p><strong>Goal:</strong> Understand how data visualization helps in interpreting information and telling a story. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Simple Text-Based Bar Chart 📊✍️</h4>
+                <p>Write a C program that takes a small array of numbers (e.g., daily steps: <code>int steps[] = {5, 7, 3, 8};</code> where each unit is 1000 steps) and prints a simple text-based bar chart using `*` characters. Scale the bars so that 1 unit (e.g., 1000 steps) = one `*`.</p>
+                <p><strong>Example Output:</strong></p>
+                <pre><code>Day 1: *****
+Day 2: *******
+Day 3: ***
+Day 4: ********
+</code></pre>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Smart Garden Data 🪴✍️</h4>
+                <p>Imagine you have a "smart garden" with a soil moisture sensor that records values from 0 (very dry) to 100 (very wet) every hour. You have the following readings for a day: <code>[20, 25, 30, 35, 40, 45, 50, 55, 60, 58, 50, 40, 30, 25, 20, 18, 15, 12, 10, 8, 7, 6, 5, 4]</code>.</p>
+                <ol>
+                    <li>What type of chart would be best to show the moisture level changing throughout the day? Why? 📈❓</li>
+                    <li>At what time (approximately) was the soil driest? When was it wettest? 💧☀️</li>
+                    <li>If you were programming this, what C concepts (variables, arrays, loops, conditionals) would you use to find the average moisture level for the day? 🧠</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 28 -->
+        <div class="slide" id="slide-28">
+            <div class="day-header">Day 28: Mini-Project: Build a "Smart Home" Simulation</div>
+            <h2 class="slide-title">Your Interactive Smart Home! 🏠💡</h2>
+            <h3>Lesson Notes: Integrated Project Building 🛠️</h3>
+            <p>Today, you'll bring together everything you've learned about electronics, sensors, actuators, and programming logic to build a "Smart Home" simulation in Tinkercad Circuits. This project will combine multiple inputs and outputs, controlled by your Arduino C++ code. 💻🔌</p>
+
+            <h4>Project Goal: Smart Home Simulation 🎯</h4>
+            <p>Design and build a small "smart home" system in Tinkercad Circuits. It should include:</p>
+            <ul>
+                <li>At least <strong>two different types of inputs (sensors/buttons)</strong>. Examples:
+                    <ul>
+                        <li><span class="emoji">🔘</span> Push button (digital input)</li>
+                        <li><span class="emoji">☀️</span> Photoresistor (light sensor - analog input)</li>
+                        <li><span class="emoji"> knob</span> Potentiometer (knob - analog input)</li>
+                    </ul>
+                </li>
+                <li>At least <strong>two different types of outputs (actuators)</strong>. Examples:
+                    <ul>
+                        <li><span class="emoji">💡</span> LED (digital output, or analog for brightness)</li>
+                        <li><span class="emoji">🔊</span> Buzzer (digital output for sound)</li>
+                        <li><span class="emoji">📐</span> Servo motor (for a rotating door/window)</li>
+                    </ul>
+                </li>
+                <li>Your Arduino code must use:
+                    <ul>
+                        <li>`setup()` and `loop()`. ⚙️♾️</li>
+                        <li>`pinMode()` for all pins. 📍</li>
+                        <li>`digitalRead()` or `analogRead()` for inputs. 📥</li>
+                        <li>`digitalWrite()` or `analogWrite()` (for PWM, e.g., LED brightness) for outputs. 📤</li>
+                        <li>`if/else` statements for decision-making. ⚖️</li>
+                        <li>`delay()` for timing. ⏳</li>
+                        <li>(Optional) `Serial.print()` for debugging/monitoring. 💬</li>
+                    </ul>
+                </li>
+                <li>The inputs should logically control the outputs (e.g., "If light is low, turn on LED"). 🧠</li>
+            </ul>
+
+            <h4>Project Ideas (Choose one or create your own): 💡</h4>
+            <ul>
+                <li><span class="emoji">🌃💡</span> <strong>Smart Night Light:</strong> Turns on an LED when it's dark (using a photoresistor).</li>
+                <li><span class="emoji">🚪🔄</span> <strong>Automated Door/Window:</strong> A button opens/closes a servo motor (simulating a door/window).</li>
+                <li><span class="emoji">🚨💨</span> <strong>Simple Alarm System:</strong> A motion sensor or button triggers a buzzer and an LED.</li>
+                <li><span class="emoji"> adjust</span> <strong>Adjustable Fan/Light:</strong> A potentiometer controls the brightness of an LED or the speed of a simulated motor.</li>
+            </ul>
+
+            <h4>Tips for Project Work: 🛠️</h4>
+            <ul>
+                <li><strong>Plan Your Circuit:</strong> Draw your circuit diagram first, showing all connections. 🗺️🔌</li>
+                <li><strong>Code Incrementally:</strong> Add one sensor/actuator at a time. Get one part working perfectly before adding the next. 🌱➡️🌳</li>
+                <li><strong>Test Each Part:</strong> Use `Serial.print()` to check if your sensors are reading correctly. 💬✅</li>
+                <li><strong>Collaborate:</strong> Work with your peers! Share ideas, help each other debug, and learn from different approaches. 🤝</li>
+            </ul>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Design Review & Pair Building 🛠️🤝</h4>
+                <p><strong>Activity:</strong> In pairs, finalize your "Smart Home" project idea. Draw a detailed circuit diagram and outline the main logic in pseudocode. Then, work together in Tinkercad to build the circuit and write the code. One person can focus on the circuit, the other on the code, then swap roles or pair program. 🗺️✍️💻</p>
+                <p><strong>Goal:</strong> Apply integrated knowledge to a practical project and practice collaborative hardware/software development. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Smart Home Simulation Building 🏗️</h4>
+                <p>Spend the majority of today's class time building and coding your "Smart Home" simulation in Tinkercad Circuits. 💻🔌</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Project Reflection & Presentation Prep 📝🗣️</h4>
+                <p>Individually, prepare for your final project presentation: ✍️</p>
+                <ol>
+                    <li>Take a screenshot of your working Tinkercad circuit. 📸</li>
+                    <li>Write a short description (3-5 sentences) of what your "Smart Home" device does. 💬</li>
+                    <li>Explain how it uses inputs, outputs, and programming logic (loops, conditionals). 🧠</li>
+                    <li>Identify one challenge you faced and how you overcame it. ⛰️✅</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Day 29 -->
+        <div class="slide" id="slide-29">
+            <div class="day-header">Day 29: Final Project Work Session & Mentoring</div>
+            <h2 class="slide-title">Polishing Your Masterpiece! ✨🏆</h2>
+            <h3>Lesson Notes: Project Refinement & Presentation Skills 💎🗣️</h3>
+            <p>Today is dedicated to perfecting your final "Smart Home" simulation and preparing for your presentations tomorrow. This is your chance to add extra features, fix any remaining bugs, and make sure your project is ready to impress! 🚀</p>
+
+            <h4>Final Project Goal: Polished "Smart Home" Simulation 🌟</h4>
+            <p>Ensure your project meets all the requirements from Day 28. Now, focus on:</p>
+            <ul>
+                <li><strong>Robustness:</strong> Does it work reliably? Test all scenarios. ✅🧪</li>
+                <li><strong>Clarity of Code:</strong> Are your comments clear? Is your code well-organized? 📝🧹</li>
+                <li><strong>Presentation Readiness:</strong> Can you clearly explain how your project works, what problem it solves, and how you built it? 🗣️💡🛠️</li>
+            </ul>
+
+            <h4>Mentoring & Support: 🤝🧑‍🏫</h4>
+            <p>Teachers and more experienced campers will be circulating as mentors today. Don't hesitate to ask for help with: 🤔</p>
+            <ul>
+                <li>Debugging stubborn issues. 🐞🩹</li>
+                <li>Brainstorming additional features. 🧠💡</li>
+                <li>Understanding specific code lines or circuit connections. 💻🔌</li>
+                <li>Practicing your presentation pitch. 🗣️🎤</li>
+            </ul>
+
+            <h4>Preparing Your Presentation: 🗣️</h4>
+            <p>Tomorrow, you'll present your project to the class. Think about: 🎤</p>
+            <ul>
+                <li><strong>Introduction:</strong> What is your device called? What problem does it solve? 🏷️❓</li>
+                <li><strong>How it Works:</strong> Explain the inputs, outputs, and the main logic (using your flowchart as a guide). 🧠🗺️</li>
+                <li><strong>Demo:</strong> Show your working simulation in Tinkercad. ▶️💻</li>
+                <li><strong>Challenges & Learnings:</strong> What was difficult? What did you learn? ⛰️💡</li>
+                <li><strong>Future Improvements:</strong> What would you add if you had more time? 📈</li>
+            </ul>
+            <p>Practice speaking clearly and confidently. Remember, everyone is learning, and we're here to support each other! 🤝</p>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Practice Presentations & Feedback 🗣️👂🤝</h4>
+                <p><strong>Activity:</strong> In small groups, take turns giving your project presentation to your peers. The audience should provide constructive feedback on clarity, completeness, and enthusiasm. Focus on what was good and what could be improved for tomorrow's final presentation. 👍📈</p>
+                <p><strong>Goal:</strong> Refine presentation skills and receive valuable feedback from peers. 🎯</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Final Project Polish 🛠️</h4>
+                <p>Spend the entire class session working on your "Smart Home" simulation. Refine your circuit, debug your code, and prepare your presentation materials (screenshots, notes). 💻🔌📝</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Final Check & Rest! ✅😴</h4>
+                <p>Do a final check of your project and presentation notes. Make sure everything is saved. Get a good night's rest – you've worked hard and tomorrow is your day to shine! ⭐</p>
+            </div>
+        </div>
+
+        <!-- Day 30 -->
+        <div class="slide" id="slide-30">
+            <div class="day-header">Day 30: Final Project Presentations & Camp Wrap-up!</div>
+            <h2 class="slide-title">Showcasing Your Innovations! 🌟🥳</h2>
+            <h3>Lesson Notes: Celebration of Learning 🎉</h3>
+            <p>Congratulations, Future Innovators! Today is the culmination of your 30-day journey. You'll be presenting your "Smart Home" simulations, sharing your creativity, and celebrating all the amazing things you've learned. 🚀</p>
+
+            <h4>Presentation Guidelines: 🗣️</h4>
+            <ul>
+                <li>Each group/individual will have 5-7 minutes to present. ⏱️</li>
+                <li>Be enthusiastic and proud of your work! 😄</li>
+                <li>Clearly explain:
+                    <ul>
+                        <li>Your device's name and purpose. 🏷️❓</li>
+                        <li>How it works (inputs, outputs, main logic). 🧠🛠️</li>
+                        <li>Demonstrate your working simulation in Tinkercad. ▶️💻</li>
+                        <li>Share a challenge you faced and how you overcame it. ⛰️✅</li>
+                        <li>What was your favorite part of the camp? ❤️</li>
+                    </ul>
+                </li>
+                <li>Be a supportive audience: Listen actively, ask thoughtful questions, and give positive feedback. 👂🤔👍</li>
+            </ul>
+
+            <h4>Peer Feedback (Constructive & Positive): 🤝</h4>
+            <p>After each presentation, we'll have a quick peer feedback session. Remember to be kind, helpful, and specific: 🙏</p>
+            <ul>
+                <li><strong>"I liked..."</strong> (e.g., "I liked how you used the light sensor to control the fan, that was clever!") 👍</li>
+                <li><strong>"One suggestion..."</strong> (e.g., "One suggestion might be to add a button to manually override the light sensor.") 💡</li>
+            </ul>
+
+            <h4>Camp Wrap-up: 🏕️🔚</h4>
+            <p>After all presentations, we'll have a brief wrap-up session:</p>
+            <ul>
+                <li>Recap of key learnings: From Scratch to C, to IoT and Robotics. 🧠🤖</li>
+                <li>Discussion on how all tracks were linked: 🔗
+                    <ul>
+                        <li><strong>Scratch:</strong> Taught you computational thinking, problem-solving, and basic programming logic (loops, conditionals, variables, events). This is the foundation! 🧱</li>
+                        <li><strong>C:</strong> Showed you how that same logic is written in a powerful, low-level text-based language, giving you a deep understanding of how computers work and preparing you for even more advanced coding (and making Python feel like a superpower later!). 💻💪</li>
+                        <li><strong>IoT/Robotics:</strong> Demonstrated how your programming skills can control real-world objects, using sensors as inputs and actuators as outputs, just like your Scratch sprites reacted to events and performed actions. The microcontroller is the "brain" running your C code, connecting the digital to the physical. 🌐🔌</li>
+                        <li><strong>Peer Learning:</strong> You learned from each other, shared ideas, and helped debug, which is how real-world teams work! 🤝</li>
+                    </ul>
+                </li>
+                <li>Certificates/Acknowledgements. 📜👏</li>
+                <li>Future steps in coding and robotics! ➡️</li>
+            </ul>
+
+            <div class="peer-learning-box">
+                <h4>Peer Learning Activity: Active Listening & Thoughtful Questions 👂🤔🤝</h4>
+                <p><strong>Activity:</strong> During presentations, actively listen to your peers' projects. Think of at least one thoughtful question or positive piece of feedback for each presenter. This helps everyone feel supported and encourages deeper learning. 💡</p>
+                <p><strong>Goal:</strong> Foster a strong sense of community and celebrate collective achievements. 🥳</p>
+            </div>
+
+            <div class="activity-box">
+                <h4>Exercise: Final Presentations! 🎤</h4>
+                <p>Present your "Smart Home" simulation to the class. 🏠</p>
+            </div>
+
+            <div class="assignment-box">
+                <h4>Assignment: Keep Learning! 📚🚀</h4>
+                <p>Your coding and robotics journey doesn't end here! Here are some ideas to keep learning: 🌱</p>
+                <ol>
+                    <li>Continue experimenting with Tinkercad Circuits. 🌐</li>
+                    <li>Explore more C projects online, or even try Python now that you've mastered C basics! 💻</li>
+                    <li>Look into buying a beginner Arduino kit or Raspberry Pi Pico to build real physical projects. 🤖</li>
+                    <li>Join online coding communities or local coding clubs. 🤝</li>
+                    <li>Teach someone else what you've learned! 🧑‍🏫</li>
+                </ol>
+                <p>Thank you for being part of the Code & Robotics Adventure! Keep coding, keep building, and keep innovating! ✨</p>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="nav-button prev" onclick="changeSlide(-1)">Previous Day</button>
+    <button class="nav-button next" onclick="changeSlide(1)">Next Day</button>
+
+    <script defer="async" src="/index.js">  </script>
+</body>
+</html>
