@@ -719,16 +719,16 @@ int main() {
     float pi = 3.14159; // Declare a float variable named 'pi'
     char initial = 'C'; // Declare a character variable
 
-    printf("Current score: %d\n", score); // %d is a placeholder for an integer
+    printf("Current score: %i\n", score); // %i is a placeholder for an integer
     printf("Value of Pi: %f\n", pi);     // %f is a placeholder for a float
     printf("My initial is: %c\n", initial); // %c is a placeholder for a character
 
     // Changing variable values
     score = score + 10; // Add 10 to score
-    printf("New score: %d\n", score);
+    printf("New score: %i\n", score);
 
     score++; // Shortcut: add 1 to score (like 'change score by 1' in Scratch)
-    printf("Score after increment: %d\n", score);
+    printf("Score after increment: %i\n", score);
 
     pi = pi * 2; // Multiply pi by 2
     printf("Pi doubled: %f\n", pi);
@@ -739,7 +739,7 @@ int main() {
             </div>
             <p><strong>Format Specifiers:</strong> When using <code>printf</code> to display variables, you need special placeholders:</p>
             <ul>
-                <li><code>%d</code> or <code>%i</code>: for <code>int</code> (decimal integer)</li>
+                <li><code>%i</code> or <code>%i</code>: for <code>int</code> (decimal integer)</li>
                 <li><code>%f</code>: for <code>float</code> (floating-point number)</li>
                 <li><code>%c</code>: for <code>char</code> (character)</li>
             </ul>
@@ -760,11 +760,11 @@ int main() {
     int num1 = 20;
     int num2 = 7;
 
-    printf("Sum: %d\n", num1 + num2);       // Output: 27
-    printf("Difference: %d\n", num1 - num2); // Output: 13
-    printf("Product: %d\n", num1 * num2);    // Output: 140
+    printf("Sum: %i\n", num1 + num2);       // Output: 27
+    printf("Difference: %i\n", num1 - num2); // Output: 13
+    printf("Product: %i\n", num1 * num2);    // Output: 140
     printf("Quotient: %f\n", (float)num1 / num2); // Output: 2.857... (Need (float) for decimal division)
-    printf("Remainder: %d\n", num1 % num2);  // Output: 6 (20 divided by 7 is 2 with remainder 6)
+    printf("Remainder: %i\n", num1 % num2);  // Output: 6 (20 divided by 7 is 2 with remainder 6)
 
     return 0;
 }
@@ -828,7 +828,7 @@ int main() {
     char initial; // Declare a character variable
 
     printf("Enter your age: ");
-    scanf("%d", &age); // Read an integer from the keyboard and store it in 'age'
+    scanf("%i", &age); // Read an integer from the keyboard and store it in 'age'
 
     printf("Enter your height in meters (e.g., 1.5): ");
     scanf("%f", &height); // Read a float
@@ -836,7 +836,7 @@ int main() {
     printf("Enter the first letter of your name: ");
     scanf(" %c", &initial); // Read a character (note the space before %c!)
 
-    printf("\nYou are %d years old, %.2f meters tall, and your initial is %c.\n", age, height, initial);
+    printf("\nYou are %i years old, %.2f meters tall, and your initial is %c.\n", age, height, initial);
 
     return 0;
 }
@@ -845,7 +845,7 @@ int main() {
             <p><strong>Important Notes:</strong></p>
             <ul>
                 <li><strong>Address-of Operator (`&`):</strong> When using <code>scanf()</code>, you need to put an ampersand (`&`) before the variable name (e.g., `&age`). This tells `scanf` where in the computer's memory to store the input.</li>
-                <li><strong>Format Specifiers:</strong> Just like with `printf()`, you need the correct format specifier (`%d`, `%f`, `%c`) to tell `scanf()` what type of data to expect.</li>
+                <li><strong>Format Specifiers:</strong> Just like with `printf()`, you need the correct format specifier (`%i`, `%f`, `%c`) to tell `scanf()` what type of data to expect.</li>
                 <li><strong>Space before `%c`:</strong> When reading a `char` after reading numbers or other text, always put a space before `%c` in `scanf(" %c", &initial);`. This consumes any leftover newline characters from previous inputs.</li>
             </ul>
 
@@ -872,7 +872,7 @@ int main() {
 int main() {
     int number;
     printf("Enter a number: ");
-    scanf("%d", &number);
+    scanf("%i", &number);
 
     if (number > 0) { // If number is greater than 0
         printf("The number is positive.\n");
@@ -885,7 +885,7 @@ int main() {
     // Example with logical operators
     int age;
     printf("Enter your age: ");
-    scanf("%d", &age);
+    scanf("%i", &age);
 
     if (age >= 7 && age <= 17) { // If age is 7 or more AND 17 or less
         printf("You are in the age range for this camp!\n");
@@ -945,7 +945,7 @@ int main() {
 int main() {
     // This loop will print "Hello!" 5 times
     for (int i = 0; i < 5; i++) {
-        printf("Hello! (Iteration %d)\n", i);
+        printf("Hello! (Iteration %i)\n", i);
     }
     // i starts at 0.
     // The loop continues as long as i < 5.
@@ -953,7 +953,7 @@ int main() {
 
     printf("\nCounting down:\n");
     for (int count = 10; count > 0; count--) {
-        printf("%d...\n", count);
+        printf("%i...\n", count);
     }
     printf("Blast off!\n");
 
@@ -976,7 +976,7 @@ int main() {
 int main() {
     int counter = 0;
     while (counter < 3) { // Loop as long as counter is less than 3
-        printf("Looping... Counter is %d\n", counter);
+        printf("Looping... Counter is %i\n", counter);
         counter++; // Important: remember to change the condition inside the loop!
     }
 
@@ -986,12 +986,12 @@ int main() {
 
     while (guess != secret_number) { // Loop until the guess is correct
         printf("Guess the secret number (1-10): ");
-        scanf("%d", &guess);
+        scanf("%i", &guess);
         if (guess != secret_number) {
             printf("Wrong guess! Try again.\n");
         }
     }
-    printf("Congratulations! You guessed it: %d\n", secret_number);
+    printf("Congratulations! You guessed it: %i\n", secret_number);
 
     return 0;
 }
@@ -1910,7 +1910,7 @@ int main() {
         for (int j = 0; j < (temp - 20); j++) {
             printf("*");
         }
-        printf(" %d°C\n", temp);
+        printf(" %i°C\n", temp);
     }
 
     printf("\n--- Temperature Trend (Simple Line Plot) ---\n");
@@ -1921,7 +1921,7 @@ int main() {
         for (int j = 0; j < (temp - 20); j++) {
             printf(" ");
         }
-        printf("Hour %d: *\n", i);
+        printf("Hour %i: *\n", i);
     }
 
     // Finding min/max/average (like 'operators' in Scratch)
@@ -1940,8 +1940,8 @@ int main() {
     }
     float avg_temp = (float)sum_temp / num_readings;
 
-    printf("\nHighest Temperature: %d°C\n", max_temp);
-    printf("Lowest Temperature: %d°C\n", min_temp);
+    printf("\nHighest Temperature: %i°C\n", max_temp);
+    printf("Lowest Temperature: %i°C\n", min_temp);
     printf("Average Temperature: %.2f°C\n", avg_temp); // .2f means 2 decimal places
 
     return 0;
